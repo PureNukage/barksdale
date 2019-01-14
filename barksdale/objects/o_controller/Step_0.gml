@@ -8,7 +8,7 @@ if (leftclick and instance_position(mouse_x,mouse_y,all)) {		//	If clicking any 
 		selection.selected = false								//  de-select it
 	}
 	
-	selection = instance_position(mouse_x,mouse_y,all)			//  Store the selected objects id
+	selection = instance_position(mouse_x,mouse_y,all)			//  Store the recently-selected objects id
 	
 	if variable_instance_exists(selection,"selected") {			//  If this is an object we can select
 		selection.selected = !selection.selected				//	Select / de-Select it
