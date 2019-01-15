@@ -2,6 +2,7 @@ name = "Goon"
 portrait = s_portrait_goon
 selected = false 
 
+movespeed = 3
 goalX = 0
 goalY = 0
 pos = 0
