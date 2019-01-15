@@ -469,6 +469,14 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "f565b263-a826-40ff-8183-e153451b3c1f",
+            "Value": {
+                "id": "88714305-f6dc-4b56-81f7-d09f796d6cc6",
+                "resourcePath": "scripts\\scr_draw_debug\\scr_draw_debug.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -484,7 +492,8 @@
         "c52c323e-b08d-4edd-8776-fdab97d52d27",
         "597f1d2b-fcfa-4c8f-b0a3-af70ceda24a9",
         "bcb43e8a-58bf-4743-a4fb-c4cc39b2f02c",
-        "6af41055-0024-4a60-9225-97fbdd97297b"
+        "6af41055-0024-4a60-9225-97fbdd97297b",
+        "f565b263-a826-40ff-8183-e153451b3c1f"
     ],
     "tutorial": ""
 }

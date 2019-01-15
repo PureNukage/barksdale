@@ -8,5 +8,5 @@ keybind_leftclick = mouse_check_button_pressed(mb_left)
 keybind_rightpress = mouse_check_button(mb_right)
 keybind_rightclick = mouse_check_button_pressed(mb_right)
 
-keybind_debugtoggle = keyboard_check(vk_control)
+keybind_debugtoggle = keyboard_check_pressed(vk_control)
 
