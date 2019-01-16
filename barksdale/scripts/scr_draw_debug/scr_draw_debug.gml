@@ -6,7 +6,7 @@ draw_set_color(c_black)
 draw_text(gui_debug_button_x1[0]+2,gui_debug_button_y1[0]+2,gui_debug_button_text[0])
 
 
-if (selection != -1) {
+if (selection != 0) {
 	draw_set_color(c_black)	
 	var variable_array = variable_instance_get_names(selection)
 	var _x = 870

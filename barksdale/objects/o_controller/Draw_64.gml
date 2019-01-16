@@ -12,7 +12,7 @@ if debug == true {
 	scr_draw_debug()
 }
 
-if selection != -1 { 
+if selection != 0 { 
 	if variable_instance_exists(selection,"portrait") {
 		var portrait = selection.portrait
 		draw_sprite(portrait,0,32,471)	

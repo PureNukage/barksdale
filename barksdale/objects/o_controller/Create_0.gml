@@ -4,8 +4,8 @@ scr_grid_init()
 
 //Var Init
 debug = false
-selection = -1
-selection_last = -1
+selection = 0
+selection_last = 0
 
 #region Macros
 

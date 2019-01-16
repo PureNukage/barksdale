@@ -17,7 +17,7 @@ enum civstates {
 	move,
 }
 
-civrandom = irandom(30)
+civrandom = irandom_range(1,30)
 civstates = civstates.idle
 
 color = scr_random_color()
