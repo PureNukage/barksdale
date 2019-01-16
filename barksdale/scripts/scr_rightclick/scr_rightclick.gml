@@ -11,10 +11,6 @@ if (rightclick and selection != -1) {
 				y_goto = path_get_point_y(goon_path,pos)
 				goonstates = goonstates.move
 			}
-			if goonstates == goonstates.move {
-				x_goto = path_get_point_x(goon_path,pos)
-				y_goto = path_get_point_y(goon_path,pos)	
-			}
 		}
 	}
 }
