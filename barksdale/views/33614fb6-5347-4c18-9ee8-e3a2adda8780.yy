@@ -8,7 +8,8 @@
         "ab2d3919-7b7d-4054-9c7a-1613075fb0b3",
         "f3c2ea29-9f6a-420d-ac8b-7bd557ef0d5a",
         "edc021e5-c318-426d-a8a2-9d7eabdbde72",
-        "28f08a66-8867-4b4c-990a-0bb8b9bf5d1a"
+        "28f08a66-8867-4b4c-990a-0bb8b9bf5d1a",
+        "36ce604c-c265-4b80-9879-4f345a3addb5"
     ],
     "filterType": "GMScript",
     "folderName": "Controller",

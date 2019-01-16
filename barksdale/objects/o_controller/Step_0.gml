@@ -2,7 +2,7 @@ scr_getinputs()
 
 scr_camera()
 
-scr_selection()
+scr_leftclick()
 
 scr_rightclick()
 
