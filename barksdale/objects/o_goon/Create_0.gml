@@ -9,6 +9,8 @@ pos = 0
 x_goto = 0
 y_goto = 0
 
+abilities = true
+
 goon_path = path_add()
 
 enum goonstates {
