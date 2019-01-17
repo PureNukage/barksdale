@@ -22,7 +22,7 @@ if (leftclick and point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_
 if (leftclick and selection != 0 and scr_gui_abilityclick(false)) {
 	var _ability = scr_gui_abilityclick(true)	
 	var _ability_number = _ability[0]
-	script_execute(ability_scr[selection.object_index,_ability_number])
+	script_execute(ability_scr[selection.object_index,_ability_number],selection.object_index,_ability_number)
 	exit;
 }
 																								

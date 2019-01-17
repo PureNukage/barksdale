@@ -7,6 +7,8 @@ camera_right = keybind_camera_right
 
 arrowright = keybind_arrowright
 arrowleft = keybind_arrowleft
+arrowup_down = keybind_arrowup_down
+arrowdown_down = keybind_arrowdown_down
 
 leftpress = keybind_leftpress
 leftclick = keybind_leftclick
