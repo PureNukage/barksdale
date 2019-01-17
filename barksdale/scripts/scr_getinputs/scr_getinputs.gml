@@ -5,6 +5,9 @@ camera_left = keybind_camera_left
 camera_down = keybind_camera_down
 camera_right = keybind_camera_right
 
+arrowright = keybind_arrowright
+arrowleft = keybind_arrowleft
+
 leftpress = keybind_leftpress
 leftclick = keybind_leftclick
 rightpress = keybind_rightpress

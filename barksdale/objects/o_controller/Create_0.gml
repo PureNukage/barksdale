@@ -6,6 +6,7 @@ scr_grid_init()
 
 //Var Init
 debug = false
+debug_focus = 0
 selection = 0
 selection_last = 0
 
@@ -14,7 +15,7 @@ resource_product = 100
 
 //Abilities
 ability_name[o_goon.object_index,0] = "deal"
-ability_scr[o_goon.object_index,0] = scr_zone()
+ability_scr[o_goon.object_index,0] = scr_zone
 
 #region Ability gui areas
 
@@ -47,6 +48,7 @@ for(var i=1;i<gui_debug_totalbuttons;i++) {
 #endregion
 
 list_buildings = ds_list_create()
+list_debug_objects = ds_list_create()
 
 enum playerstates {
 	free,
@@ -54,3 +56,5 @@ enum playerstates {
 }
 
 playerstates = playerstates.free
+
+ds_list_insert(list_debug_objects,ds_list_size(list_debug_objects),id)

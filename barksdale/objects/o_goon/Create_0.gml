@@ -11,6 +11,8 @@ y_goto = 0
 
 abilities = true
 
+ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
+
 goon_path = path_add()
 
 enum goonstates {
