@@ -2,14 +2,13 @@ scr_getinputs()
 
 scr_camera()
 
-scr_leftclick()
-
-scr_rightclick()
-
 switch(playerstates)
 {
+	case playerstates.free: scr_player_free() break;
 	case playerstates.placement: scr_player_placement() break;	
 }
+
+scr_leftclick()
 
 if (debug_focus + (arrowright-arrowleft)) == -1 or debug_focus + (arrowright-arrowleft) == ds_list_size(list_debug_objects)  {
 	debug_focus = debug_focus

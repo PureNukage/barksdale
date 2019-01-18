@@ -11,6 +11,8 @@ debug_scroll = 0
 selection = 0
 selection_last = 0
 
+dontclick = false
+
 resource_money = 500
 resource_product = 100
 
@@ -21,8 +23,8 @@ ability_scr[o_goon.object_index,0] = scr_zone
 //Zone
 zone_w = 0
 zone_h = 0
-zone_c1 = 0
-zone_c2 = 0
+zone_ch = 0
+zone_cw = 0
 zone_x = 0
 zone_y = 0
 
