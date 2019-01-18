@@ -9,6 +9,7 @@ x_goto = 0
 y_goto = 0
 pos = 0
 movespeed = 3
+recently_purchased = false	//Used with o_goon:scr_goon_deal to prevent multi-frame collisions
 
 civilian_path = path_add()
 

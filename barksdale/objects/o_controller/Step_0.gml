@@ -25,3 +25,14 @@ if (debug_scroll + (arrowdown_down-arrowup_down)) == -100 {
 if debugtoggle {
 	debug = !debug
 }
+
+//Day restart
+if current_minute != day_current {	// It's a new day!
+	day_previous = day_current
+	day_current = current_minute
+	if instance_exists(o_civilian) {
+		with o_civilian {
+			recently_purchased = false
+		}
+	}
+}

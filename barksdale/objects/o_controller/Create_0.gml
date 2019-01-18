@@ -11,6 +11,10 @@ debug_scroll = 0
 selection = 0
 selection_last = 0
 
+//Time
+day_current = current_minute
+day_previous = current_minute
+
 dontclick = false
 
 resource_money = 500
@@ -25,8 +29,6 @@ zone_w = 0
 zone_h = 0
 zone_ch = 0
 zone_cw = 0
-zone_x = 0
-zone_y = 0
 
 zone_object_index = 0
 zone_ability_id = 0

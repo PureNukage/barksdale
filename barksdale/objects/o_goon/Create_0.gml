@@ -20,4 +20,10 @@ enum goonstates {
 	move,
 }	
 
+enum goontasks {
+	roam,
+	deal,
+}
+
 goonstates = goonstates.idle
+goontasks = goontasks.roam
