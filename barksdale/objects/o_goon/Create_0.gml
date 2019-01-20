@@ -10,6 +10,10 @@ x_goto = 0
 y_goto = 0
 
 abilities = true
+inventory = true
+
+money = 0
+product = 0
 
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
 

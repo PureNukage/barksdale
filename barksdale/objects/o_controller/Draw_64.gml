@@ -1,11 +1,11 @@
 //GUI
 
 //Portrait Box
-draw_set_color(c_gray)
+draw_set_color(c_back_gray)
 draw_rectangle(23,462,270,703,false)
 
-//Nameplate
-draw_rectangle(283,539,650,614,false)
+//Stats Box
+draw_roundrect(277,486,448,703,false)
 
 //Resources
 draw_roundrect(9,6,324,51,false)
@@ -32,22 +32,52 @@ if selection != 0 {		//If an object is selected
 	}
 	
 	if variable_instance_exists(selection,"name") {
+		
+		draw_set_color(c_front_gray)
+		draw_roundrect(285,491,440,522,false)
+		
 		draw_set_color(c_black)
-		draw_set_halign(fa_middle)
-		draw_set_font(batang_64)
-		draw_text(477,548,selection.name)
+		draw_set_font(font_name)
+		draw_text(290,492,selection.name)
 		draw_set_font(-1)
-		draw_set_halign(fa_left)
 	} else { 
 		draw_text(477,487,"No name")
 	}
-	//Drawing Abilities
-	if variable_instance_exists(selection,"abilities") {
-		draw_set_color(c_gray)
-		draw_roundrect(gui_ability_button_x1[0],gui_ability_button_y1[0],
-		gui_ability_button_x2[0],gui_ability_button_y2[0],false)
+	
+	draw_set_color(c_front_gray)
+	draw_roundrect(285,528,359,559,false)
+	draw_roundrect(366,528,440,559,false)
+	
+	if variable_instance_exists(selection,"building_type") {
+		draw_set_color(c_black)
+		draw_text(288,534,selection.building_type)	
+	}
+	
+	if variable_instance_exists(selection,"inventory") {
+		draw_set_color(c_front_gray)
+		draw_roundrect(285,634,440,698,false)
 		
 		draw_set_color(c_black)
-		draw_text(gui_ability_button_x1[0]+20,gui_ability_button_y1[0]+25,ability_name[selection.object_index,0])
+		draw_text(291,639,"money: " + string(selection.money))
+		draw_text(291,661,"product: " + string(selection.product))
+	} 
+	
+	
+	//Drawing Abilities
+	if variable_instance_exists(selection,"abilities") {	
+		for(var i=0;i<gui_ability_totalbuttons[selection.object_index];i++) {
+			
+			if point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),gui_ability_button_x1[i],
+			gui_ability_button_y1[i],gui_ability_button_x2[i],gui_ability_button_y2[i]) {
+				draw_set_color(c_front_gray)	
+			} else {
+				draw_set_color(c_back_gray)	
+			}
+			draw_roundrect(gui_ability_button_x1[i],gui_ability_button_y1[i],
+			gui_ability_button_x2[i],gui_ability_button_y2[i],false)
+			
+			draw_set_color(c_black)
+			draw_text(gui_ability_button_x1[i]+20,gui_ability_button_y1[i]+25,ability_name[selection.object_index,i])
+		}
 	}
 }

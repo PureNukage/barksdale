@@ -20,13 +20,20 @@ dontclick = false
 resource_money = 500
 resource_product = 100
 
+//GUI Back Color
+c_front_gray = make_color_rgb(85,85,85)
+c_back_gray = make_color_rgb(54,54,54)
+
 //Abilities
+//Goon
 ability_name[o_goon.object_index,0] = "deal"
 ability_scr[o_goon.object_index,0] = scr_zone
 
+gui_ability_totalbuttons[o_goon.object_index] = 1
 
-//House tiers
-ability_name[o_building.object_index,0] = "purchase"
+//House
+gui_ability_totalbuttons[o_building.object_index] = 1
+ability_name[o_building.object_index,0] = "turn into \n safehouse"
 
 //Zone
 zone_w = 0
@@ -39,12 +46,18 @@ zone_ability_id = 0
 
 #region Ability gui areas
 
-gui_ability_button_x1[0] = 283
-gui_ability_button_y1[0] = 623
+gui_ability_button_x1[0] = 453
+gui_ability_button_y1[0] = 624
 gui_ability_button_x2[0] = gui_ability_button_x1[0] + 79
 gui_ability_button_y2[0] = gui_ability_button_y1[0] + 79
 
-//eventually do a for-loop just like debug gui areas, maybe like 4-6 sockets?
+
+for(var i=1;i<5;i++) {
+	gui_ability_button_x1[i] = gui_ability_button_x2[i-1] - 8
+	gui_ability_button_y1[i] = gui_ability_button_y2[i-1] - 8
+	gui_ability_button_x2[i] = gui_ability_button_x1[i] + 79
+	gui_ability_button_y2[i] = gui_ability_button_y1[i] + 79
+}
 
 #endregion
 
