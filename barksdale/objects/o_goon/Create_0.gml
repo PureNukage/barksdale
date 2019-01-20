@@ -12,8 +12,8 @@ y_goto = 0
 abilities = true
 inventory = true
 
-money = 0
-product = 0
+resource_money = 0
+resource_product = 0
 
 //Ownership
 ownership = ownership.player

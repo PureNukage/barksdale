@@ -17,8 +17,17 @@ day_previous = current_minute
 
 dontclick = false
 
-resource_money = 500
-resource_product = 100
+resource_money = 0
+bank = 0
+resource_product = 0
+
+enum initial_resource_count {
+	building_load,
+	count_resources,
+	stop_counting
+}
+
+initial_resource_count = initial_resource_count.building_load
 
 //GUI Back Color
 c_front_gray = make_color_rgb(85,85,85)
@@ -62,10 +71,10 @@ gui_ability_button_y2[0] = gui_ability_button_y1[0] + 79
 
 
 for(var i=1;i<5;i++) {
-	gui_ability_button_x1[i] = gui_ability_button_x2[i-1] - 8
-	gui_ability_button_y1[i] = gui_ability_button_y2[i-1] - 8
-	gui_ability_button_x2[i] = gui_ability_button_x1[i] + 79
-	gui_ability_button_y2[i] = gui_ability_button_y1[i] + 79
+	gui_ability_button_x1[i] = (gui_ability_button_x2[i-1])+5
+	gui_ability_button_y1[i] = 624
+	gui_ability_button_x2[i] = (gui_ability_button_x1[i] + 79)
+	gui_ability_button_y2[i] = gui_ability_button_y1[0] + 79
 }
 
 #endregion

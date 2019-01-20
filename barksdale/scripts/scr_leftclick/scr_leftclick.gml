@@ -30,7 +30,7 @@ if (leftclick and selection != 0 and scr_gui_abilityclick(false)) {
 			exit;
 		break;
 		case "o_house":
-			script_execute(selection.array_house_abilities_scr[selection.house,_ability_number],_ability_number)
+			script_execute(selection.array_abilities_scr[selection.house,_ability_number],_ability_number)
 			exit;
 		break;
 	}

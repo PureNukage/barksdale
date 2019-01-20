@@ -10,8 +10,14 @@ switch(object)
 {
 	case "o_house":
 		draw_set_color(c_black)
-		draw_text(43,343,selection.array_house_abilities_tooltip[selection.house,ability])
-		draw_text(390,420,"$"+string(selection.array_house_abilities_price[selection.house,ability]))
+		draw_text(43,343,selection.array_abilities_tooltip[selection.house,ability])
+		
+		//is this is an upgrade, draw the price too
+		if selection.array_abilities_type[selection.house,ability] == type.upgrade {
+			draw_text(390,420,"$"+string(selection.array_abilities_price[selection.house,ability]))
+		} else {
+				
+		}
 	
 	break;
 }

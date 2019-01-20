@@ -2,6 +2,20 @@ scr_getinputs()
 
 scr_camera()
 
+switch(initial_resource_count)
+{
+	case initial_resource_count.building_load:
+		initial_resource_count = initial_resource_count.count_resources
+	break;
+	case initial_resource_count.count_resources:
+		scr_resource_count()
+		initial_resource_count = initial_resource_count.stop_counting
+	break;
+	case initial_resource_count.stop_counting:
+		
+	break;
+}
+
 switch(playerstates)
 {
 	case playerstates.free: scr_player_free() break;
