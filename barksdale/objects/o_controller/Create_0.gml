@@ -24,6 +24,15 @@ resource_product = 100
 c_front_gray = make_color_rgb(85,85,85)
 c_back_gray = make_color_rgb(54,54,54)
 
+//Ownership
+enum ownership {
+	player,
+	world,
+}	
+
+array_ownership[ownership.player] = "You"
+array_ownership[ownership.world] = "World"
+
 //Abilities
 //Goon
 ability_name[o_goon.object_index,0] = "deal"

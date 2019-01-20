@@ -15,6 +15,9 @@ inventory = true
 money = 0
 product = 0
 
+//Ownership
+ownership = ownership.player
+
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
 
 goon_path = path_add()

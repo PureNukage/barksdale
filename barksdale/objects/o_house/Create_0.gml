@@ -15,11 +15,14 @@ enum house {
 	
 }
 
+ownership = ownership.world
+
 name[house.vacant] = "Vacant"
 name[house.owned] = "Owned"
 name[house.safehouse] = "Safehouse"
 
 if ds_list_size(o_controller.list_buildings) == 1 {
+	ownership = ownership.player
 	house = house.owned
 	sprite_index = s_building_house_owned
 } else {

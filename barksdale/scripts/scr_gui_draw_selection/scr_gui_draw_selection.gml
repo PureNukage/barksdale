@@ -10,7 +10,12 @@ draw_roundrect(285,528,359,559,false)	//Drawing (building_type/job) panel
 draw_roundrect(366,528,440,559,false)	//Drawing ownership panel
 draw_roundrect(285,634,440,698,false)	//Drawing Inventory panel
 
-var ability_loop, draw_text_x, draw_text_y, draw_text_text
+draw_set_color(c_black)
+draw_set_halign(fa_middle)
+draw_text(403,534,array_ownership[selection.ownership])
+draw_set_halign(fa_left)
+
+var ability_loop
 
 switch(object_get_name(selection.object_index))		//Drawing data inside the panels
 {
