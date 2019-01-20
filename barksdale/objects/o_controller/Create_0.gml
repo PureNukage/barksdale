@@ -31,9 +31,9 @@ ability_scr[o_goon.object_index,0] = scr_zone
 
 gui_ability_totalbuttons[o_goon.object_index] = 1
 
-//House
-gui_ability_totalbuttons[o_house.object_index] = 1
-ability_name[o_house.object_index,0] = "turn into \n safehouse"
+var civ = instance_create_layer(0,0,"Instances",o_civilian)
+gui_ability_totalbuttons[o_civilian.object_index] = 0
+with civ { instance_destroy() }
 
 //Zone
 zone_w = 0

@@ -37,6 +37,14 @@ switch(object_get_name(selection.object_index))		//Drawing data inside the panel
 		ability_loop = selection.array_house_abilities_totals[selection.house]
 		
 	break;
+	case "o_civilian":
+		draw_set_color(c_black)
+		draw_set_font(font_name)
+		draw_text(290,492,selection.name)		//Drawing name
+		draw_set_font(-1)
+	
+		ability_loop = 0
+	break;
 }
 
 for(var i=0;i<ability_loop;i++) {

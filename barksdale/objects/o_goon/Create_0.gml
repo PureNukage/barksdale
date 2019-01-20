@@ -29,5 +29,8 @@ enum goontasks {
 	deal,
 }
 
+//Arrays
+//total
+
 goonstates = goonstates.idle
 goontasks = goontasks.roam

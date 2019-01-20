@@ -2,7 +2,7 @@
     "id": "34d19b0e-c528-4a6c-b18a-7a366f8204bb",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_building_owned",
+    "name": "s_building_house_owned",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -50,7 +50,7 @@
             "Key": "16239f27-b3c0-436a-a16b-71ec67ee5ffc",
             "Value": {
                 "id": "5ea175eb-6c62-4850-8cf1-919f0f572724",
-                "resourcePath": "sprites\\s_building_vacant\\s_building_vacant.yy",
+                "resourcePath": "sprites\\s_building_house_vacant\\s_building_house_vacant.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -154,7 +154,7 @@
             "Key": "34d19b0e-c528-4a6c-b18a-7a366f8204bb",
             "Value": {
                 "id": "d3e05f29-5fd2-49f0-ae57-2287000b076a",
-                "resourcePath": "sprites\\s_building_owned\\s_building_owned.yy",
+                "resourcePath": "sprites\\s_building_house_owned\\s_building_house_owned.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -332,6 +332,14 @@
                 "id": "ed8ae111-938f-4f62-9a82-dd65e1ddb6f8",
                 "resourcePath": "objects\\o_player\\o_player.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "864d6813-61b7-4928-8979-082c6300d3c1",
+            "Value": {
+                "id": "f4997ab8-bb10-4eb4-85ae-23e5f2f5132f",
+                "resourcePath": "sprites\\s_building_house_safehouse\\s_building_house_safehouse.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
