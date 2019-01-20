@@ -1,4 +1,4 @@
-var _totalhouses = instance_number(o_building)
+var _totalhouses = instance_number(o_house)
 
 var _totalcivs = _totalhouses - 6
 

@@ -11,7 +11,7 @@ mp_grid_ = mp_grid_create(0,0,level_width,level_height,cell_width,cell_height)
 
 ai_path = path_add()
 
-mp_grid_add_instances(mp_grid,o_building,false)
+mp_grid_add_instances(mp_grid,o_house,false)
 
 #endregion
 

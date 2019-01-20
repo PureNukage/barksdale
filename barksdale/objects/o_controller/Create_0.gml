@@ -32,8 +32,8 @@ ability_scr[o_goon.object_index,0] = scr_zone
 gui_ability_totalbuttons[o_goon.object_index] = 1
 
 //House
-gui_ability_totalbuttons[o_building.object_index] = 1
-ability_name[o_building.object_index,0] = "turn into \n safehouse"
+gui_ability_totalbuttons[o_house.object_index] = 1
+ability_name[o_house.object_index,0] = "turn into \n safehouse"
 
 //Zone
 zone_w = 0

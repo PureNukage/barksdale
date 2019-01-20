@@ -2,7 +2,7 @@
     "id": "3c75c5e1-d5e8-4586-8664-0dc6bc13fb2d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_building",
+    "name": "o_house",
     "eventList": [
         {
             "id": "45d2d2ac-318e-4d4a-babe-fb90a8cbd60e",
