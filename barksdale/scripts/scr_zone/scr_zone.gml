@@ -7,6 +7,8 @@ switch(object_get_name(_object_index))
 		switch(_ability_number)
 		{
 			case 0:
+				selection.array_abilities_color_toggle = _ability_number
+				selection.array_abilities_colors[_ability_number] = true
 				zone_h = 3
 				zone_w = 3
 				zone_ch = 2

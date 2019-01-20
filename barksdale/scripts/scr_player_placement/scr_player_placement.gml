@@ -7,11 +7,15 @@ if (rightclick) {
 	if instance_exists(o_placement) {
 		with o_placement { instance_destroy() }
 	}
+	if selection.array_abilities_color_toggle != -1 {
+		selection.array_abilities_colors[selection.array_abilities_color_toggle] = 0
+		selection.array_abilities_color_toggle = -1
+	}
 	playerstates = playerstates.free	
 }
-
-if (leftclick) {
-	if instance_exists(o_placement) {
+	
+if (leftclick) {			// i believe this only works with the deal ability, not sure
+	if instance_exists(o_placement) {	
 		var placement = o_placement.id
 	}
 	
@@ -39,6 +43,12 @@ if (leftclick) {
 	if instance_exists(o_placement) {
 		with o_placement { instance_destroy() }
 	}
+	
+	if selection.array_abilities_color_toggle != -1 {
+	selection.array_abilities_colors[selection.array_abilities_color_toggle] = 0
+	selection.array_abilities_color_toggle = -1
+	}
+	
 	playerstates = playerstates.free	
 	zone_h = 0
 	zone_w = 0

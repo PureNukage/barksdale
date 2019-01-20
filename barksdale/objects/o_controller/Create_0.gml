@@ -42,13 +42,6 @@ enum ownership {
 array_ownership[ownership.player] = "You"
 array_ownership[ownership.world] = "World"
 
-//Abilities
-//Goon
-ability_name[o_goon.object_index,0] = "deal"
-ability_scr[o_goon.object_index,0] = scr_zone
-
-gui_ability_totalbuttons[o_goon.object_index] = 1
-
 var civ = instance_create_layer(0,0,"Instances",o_civilian)
 gui_ability_totalbuttons[o_civilian.object_index] = 0
 with civ { instance_destroy() }

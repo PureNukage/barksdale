@@ -1,3 +1,6 @@
+o_controller.resource_money = 0
+o_controller.resource_product = 0
+
 for(var i=0;i<ds_list_size(o_controller.list_debug_objects);i++) {
 	var _id = ds_list_find_value(o_controller.list_debug_objects,i)
 	

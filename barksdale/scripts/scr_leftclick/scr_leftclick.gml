@@ -26,7 +26,7 @@ if (leftclick and selection != 0 and scr_gui_abilityclick(false)) {
 	switch(object_get_name(selection.object_index))
 	{
 		case "o_goon":
-			script_execute(ability_scr[selection.object_index,_ability_number],selection.object_index,_ability_number)
+			script_execute(selection.array_abilities_scr[selection.goonjobs,_ability_number],selection.object_index,_ability_number)
 			exit;
 		break;
 		case "o_house":
