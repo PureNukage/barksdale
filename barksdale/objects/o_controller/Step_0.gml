@@ -8,8 +8,6 @@ switch(playerstates)
 	case playerstates.placement: scr_player_placement() break;	
 }
 
-scr_leftclick()
-
 if (debug_focus + (arrowright-arrowleft)) == -1 or debug_focus + (arrowright-arrowleft) == ds_list_size(list_debug_objects)  {
 	debug_focus = debug_focus
 } else {
