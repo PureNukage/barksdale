@@ -24,6 +24,10 @@ resource_product = 100
 ability_name[o_goon.object_index,0] = "deal"
 ability_scr[o_goon.object_index,0] = scr_zone
 
+
+//House tiers
+ability_name[o_building.object_index,0] = "purchase"
+
 //Zone
 zone_w = 0
 zone_h = 0

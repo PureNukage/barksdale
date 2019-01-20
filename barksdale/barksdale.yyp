@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "11e56ac1-cea5-47c0-8a80-06bcfc82828a",
+            "Value": {
+                "id": "0e563f78-8b9f-4fc8-a2fc-33fd0f5fea94",
+                "resourcePath": "fonts\\roboto_condensed_12\\roboto_condensed_12.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "16239f27-b3c0-436a-a16b-71ec67ee5ffc",
             "Value": {
                 "id": "5ea175eb-6c62-4850-8cf1-919f0f572724",
@@ -84,6 +92,14 @@
                 "id": "8cba0199-44e7-4327-a3ed-f717ea161093",
                 "resourcePath": "scripts\\scr_goon_idle\\scr_goon_idle.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "26254465-50fd-416e-bec7-4e9fb8f1791b",
+            "Value": {
+                "id": "79c339c0-97dc-4580-ae8c-fb983f7867d3",
+                "resourcePath": "datafiles_yy\\Roboto-Condensed.ttf.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -479,6 +495,14 @@
             }
         },
         {
+            "Key": "d471b2c7-a1ef-46e5-b011-5942d6a644b0",
+            "Value": {
+                "id": "69d1479d-61f8-4398-abb3-bb4538bcaaff",
+                "resourcePath": "scripts\\scr_house_purchase\\scr_house_purchase.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d9edb1b4-827f-4c3c-b3cb-55fcf8c7be06",
             "Value": {
                 "id": "d4844286-10aa-4b0b-8836-00b52a8f25c1",
@@ -580,7 +604,8 @@
         "bcb43e8a-58bf-4743-a4fb-c4cc39b2f02c",
         "6af41055-0024-4a60-9225-97fbdd97297b",
         "f565b263-a826-40ff-8183-e153451b3c1f",
-        "e227489a-584e-4979-81f7-3ae73784b453"
+        "e227489a-584e-4979-81f7-3ae73784b453",
+        "d471b2c7-a1ef-46e5-b011-5942d6a644b0"
     ],
     "tutorial": ""
 }
