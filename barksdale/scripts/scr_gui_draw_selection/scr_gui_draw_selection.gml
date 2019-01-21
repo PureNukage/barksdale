@@ -69,6 +69,7 @@ for(var i=0;i<5;i++) {
 	switch(object_get_name(selection.object_index)) {	
 		case "o_goon": ability_total = selection.goonjobs break;
 		case "o_house": ability_total = selection.house break;
+		case "o_civilian": exit; break;
 	}
 	
 	if current_slot_total == selection.array_abilities_totals[ability_total] {	

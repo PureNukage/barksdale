@@ -9,8 +9,16 @@ pos = 0
 x_goto = 0
 y_goto = 0
 
-abilities = true
-inventory = true
+//Dealing times
+channel_time = 0
+current_channel_time = 0
+
+//Zone stuff
+zone_ch = 0
+zone_cw = 0
+zone_h = 0
+zone_w = 0
+zone_array = 0
 
 resource_money = 0
 resource_product = 0
@@ -19,7 +27,16 @@ enum goonjobs {
 	hopper
 }
 
+skip = false
+
+current_action = 0
+
 job[goonjobs.hopper] = "Hopper"
+
+//Target
+target_id = 0
+target_x = 0
+target_y = 0
 
 //Ability Arrays
 //Colors

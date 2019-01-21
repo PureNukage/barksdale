@@ -14,6 +14,7 @@ if _returnarray == false {
 		switch(object_get_name(selection.object_index)) {
 			case "o_goon": ability_total = selection.goonjobs break;	
 			case "o_house": ability_total = selection.house break;
+			case "o_civilian": exit; break;
 		}
 		
 		if current_slot_total == selection.array_abilities_totals[ability_total] {	

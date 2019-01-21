@@ -31,6 +31,7 @@ if (leftclick) {			// i believe this only works with the deal ability, not sure
 		zone_cw = other.zone_cw
 		start_x = placement.start_x
 		start_y = placement.start_y
+		zone_array = scr_zone_green_array()
 		
 		if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,grid,true) {
 			pos = 1
@@ -54,4 +55,5 @@ if (leftclick) {			// i believe this only works with the deal ability, not sure
 	zone_w = 0
 	zone_ch = 0
 	zone_cw = 0
+	zone_array = 0
 }

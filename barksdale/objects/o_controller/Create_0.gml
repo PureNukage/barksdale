@@ -21,6 +21,8 @@ resource_money = 0
 bank = 0
 resource_product = 0
 
+resource_product_price = 2
+
 enum initial_resource_count {
 	building_load,
 	count_resources,
