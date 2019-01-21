@@ -7,8 +7,10 @@ resource_product += amount
 
 if resource_money > 0 {				//Turn in all money
 	o_controller.bank.resource_money += resource_money
-	resouce_money = 0
+	resource_money = 0
 }
+
+scr_resource_count()
 
 //Set goal back to our zone
 

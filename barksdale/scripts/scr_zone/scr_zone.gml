@@ -14,8 +14,8 @@ switch(object_get_name(_object_index))
 				zone_ch = 2
 				zone_cw = 2
 				var placement = instance_create_layer(mouse_x,mouse_y,"Instances",o_placement)
-				placement.start_x = (mouse_x-zone_cw-1)*32
-				placement.start_y = (mouse_y-zone_ch-1)*32
+				placement.start_x = mouse_y
+				placement.start_y = mouse_y		//This is so the zone thing doesn't appear at 0,0 for a frame
 				dontclick = true
 				playerstates = playerstates.placement
 			break;

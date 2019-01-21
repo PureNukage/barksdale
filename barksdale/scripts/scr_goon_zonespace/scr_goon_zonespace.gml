@@ -2,8 +2,8 @@
 var finished_loop = false
 
 while finished_loop == false {
-	var random_x = irandom_range(0,zone_w)
-	var random_y = irandom_range(0,zone_h)
+	var random_x = irandom_range(0,zone_w-1)
+	var random_y = irandom_range(0,zone_h-1)
 
 	if (zone_array[random_x,random_y] == 1) {
 		finished_loop = true	

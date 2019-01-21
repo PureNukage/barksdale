@@ -40,32 +40,12 @@ if resource_product < 15 and skip == false {
 	and
 	point_in_rectangle(x,y,start_x,start_y,zone_collision_x2,zone_collision_y2){
 		var customer = collision_rectangle(start_x,start_y,zone_collision_x2,zone_collision_y2,o_civilian,false,true)
-		if customer.recently_purchased == false and skip = false {
+		if customer.recently_purchased == false {
 			
-			//refactor this so the customer is walking over on his own will
-			with customer {
-				goalX = other.x
-				goalY = other.y
-			
-				if scr_mp_grid_define_path(x,y,goalX,goalY,civilian_path,grid,true) {
-					pos = 1
-					x_goto = path_get_point_x(civilian_path,pos)
-					y_goto = path_get_point_y(civilian_path,pos)
-					civstates = civstates.move
-					other.target_id = customer
-					other.skip = true
-					other.channel_time = irandom_range(30,240)
-				}		
-				
-			}
+			scr_goon_sell()
+			customer.recently_purchased = true	
 
-		} else if customer.recently_purchased == false and target_id != 0 {
-			
-			current_channel_time++
-			scr_goon_sell(channel_time,current_channel_time)			
-			
-		}
-	
+		} 	
 		
 	} 
 	

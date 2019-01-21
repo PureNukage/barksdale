@@ -20,7 +20,8 @@ enum house {
 
 enum type {
 	upgrade,
-	ability
+	ability,
+	purchase
 }
 
 ownership = ownership.world
@@ -77,10 +78,19 @@ array_abilities_tooltip[house.owned,2] = "Payments for the organization be pulle
 #endregion
 
 #region Safehouse
-array_abilities_totals[house.safehouse] = 1
+array_abilities_totals[house.safehouse] = 2
 array_abilities_slots[house.safehouse,0] = 0
-array_abilities_slots[house.safehouse,1] = 0
+array_abilities_slots[house.safehouse,1] = 1
 array_abilities_slots[house.safehouse,2] = 1
+
+//Buy more product
+array_abilities_scr[house.safehouse,1] = scr_house_product
+array_abilities_type[house.safehouse,1] = type.purchase
+array_abilities_names[house.safehouse,1] = "buy\nproduct"
+array_abilities_price[house.safehouse,1] = 150
+array_abilities_resource[house.safehouse,1] = "resource_product"
+array_abilities_resource_qty[house.safehouse,1] = 100
+array_abilities_tooltip[house.safehouse,1] = "Buy 100 more product"
 
 //Bank
 array_abilities_scr[house.safehouse,2] = scr_house_bank
