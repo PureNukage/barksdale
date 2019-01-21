@@ -9,6 +9,8 @@ switch(initial_resource_count)
 	break;
 	case initial_resource_count.count_resources:
 		scr_resource_count()
+		scr_civilian_spawn()
+		scr_civilian_spawn()
 		initial_resource_count = initial_resource_count.stop_counting
 	break;
 	case initial_resource_count.stop_counting:
