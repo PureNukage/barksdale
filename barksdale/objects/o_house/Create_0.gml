@@ -59,7 +59,8 @@ array_abilities_tooltip[house.vacant,0] = "Guaranteed to have that fresh new\nho
 array_abilities_totals[house.owned] = 2
 array_abilities_slots[house.owned,0] = 1
 array_abilities_slots[house.owned,1] = 0
-array_abilities_slots[house.owned,2] = 1
+array_abilities_slots[house.owned,2] = 0
+array_abilities_slots[house.owned,3] = 1
 //Turn into Safehouse $200
 array_abilities_scr[house.owned,0] = scr_house_purchase
 array_abilities_type[house.owned,0] = type.upgrade
@@ -70,33 +71,44 @@ array_abilities_nextstate[house.owned,0] = house.safehouse
 array_abilities_tooltip[house.owned,0] = "A safehouse is used to recruit crew"
 
 //Bank
-array_abilities_scr[house.owned,2] = scr_house_bank
-array_abilities_type[house.owned,2]= type.ability
-array_abilities_names[house.owned,2] = "bank"
-array_abilities_tooltip[house.owned,2] = "Payments for the organization be pulled\nfrom this property"
+array_abilities_scr[house.owned,3] = scr_house_bank
+array_abilities_type[house.owned,3]= type.ability
+array_abilities_names[house.owned,3] = "bank"
+array_abilities_tooltip[house.owned,3] = "Payments for the organization be pulled\nfrom this property"
 
 #endregion
 
 #region Safehouse
-array_abilities_totals[house.safehouse] = 2
+array_abilities_totals[house.safehouse] = 3
 array_abilities_slots[house.safehouse,0] = 0
 array_abilities_slots[house.safehouse,1] = 1
 array_abilities_slots[house.safehouse,2] = 1
+array_abilities_slots[house.safehouse,3] = 1
 
-//Buy more product
+//Buy more goons
 array_abilities_scr[house.safehouse,1] = scr_house_product
 array_abilities_type[house.safehouse,1] = type.purchase
-array_abilities_names[house.safehouse,1] = "buy\nproduct"
-array_abilities_price[house.safehouse,1] = 150
-array_abilities_resource[house.safehouse,1] = "resource_product"
-array_abilities_resource_qty[house.safehouse,1] = 100
-array_abilities_tooltip[house.safehouse,1] = "Buy 100 more product"
+array_abilities_names[house.safehouse,1] = "buy\ngoon"
+array_abilities_price[house.safehouse,1] = 250
+array_abilities_resource[house.safehouse,1] = "o_goon"
+array_abilities_resource_qty[house.safehouse,1] = 1
+array_abilities_tooltip[house.safehouse,1] = "Hire some more muscle"
+
+
+//Buy more product
+array_abilities_scr[house.safehouse,2] = scr_house_product
+array_abilities_type[house.safehouse,2] = type.purchase
+array_abilities_names[house.safehouse,2] = "buy\nproduct"
+array_abilities_price[house.safehouse,2] = 150
+array_abilities_resource[house.safehouse,2] = "resource_product"
+array_abilities_resource_qty[house.safehouse,2] = 100
+array_abilities_tooltip[house.safehouse,2] = "Buy 100 more product"
 
 //Bank
-array_abilities_scr[house.safehouse,2] = scr_house_bank
-array_abilities_type[house.safehouse,2]= type.ability
-array_abilities_names[house.safehouse,2] = "bank"
-array_abilities_tooltip[house.safehouse,2] = "Payments for the organization be pulled\nfrom this property"
+array_abilities_scr[house.safehouse,3] = scr_house_bank
+array_abilities_type[house.safehouse,3]= type.ability
+array_abilities_names[house.safehouse,3] = "bank"
+array_abilities_tooltip[house.safehouse,3] = "Payments for the organization be pulled\nfrom this property"
 
 
 #endregion
@@ -113,7 +125,7 @@ if ds_list_size(o_controller.list_buildings) == 1 {
 	resource_money = 500
 	resource_product = 100
 	o_controller.bank = id
-	array_abilities_colors[2] = true
+	array_abilities_colors[3] = true
 	
 } else {
 	house = house.vacant

@@ -1,9 +1,20 @@
 //Picking up more product from the bank
 
-var amount = 100
+var amount
 
-o_controller.bank.resource_product -= amount
-resource_product += amount
+if o_controller.bank.resource_product > 0 {
+	if o_controller.bank.resource_product >= 100 {
+		amount = 100
+	} else {
+		amount = o_controller.bank.resource_product	
+	}
+	o_controller.bank.resource_product -= amount
+	resource_product += amount
+} else {
+	
+	// out of product! what do i do ??	
+	
+}
 
 if resource_money > 0 {				//Turn in all money
 	o_controller.bank.resource_money += resource_money
