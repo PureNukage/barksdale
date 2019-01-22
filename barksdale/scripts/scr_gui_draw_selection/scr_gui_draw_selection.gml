@@ -57,12 +57,13 @@ switch(object_get_name(selection.object_index))		//Drawing data inside the panel
 	break;
 }
 
+#region <--------------------         DRAWING ABILITIES        ------------------------------------------->
+
 var current_slot_used = false
 var current_slot_total = 0
 var ability_total = 0
 
 for(var i=0;i<5;i++) {
-		
 		
 	//    <---- is this ability slot set?     ----->  
 	
@@ -112,3 +113,5 @@ for(var i=0;i<5;i++) {
 		
 	}
 }	
+
+#endregion

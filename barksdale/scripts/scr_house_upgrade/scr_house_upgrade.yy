@@ -1,8 +1,8 @@
 {
-    "id": "b0a5f51c-b602-48a6-b28a-c40213eed1bb",
+    "id": "d471b2c7-a1ef-46e5-b011-5942d6a644b0",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_gui_abilityclick",
+    "name": "scr_house_upgrade",
     "IsCompatibility": false,
     "IsDnD": false
 }

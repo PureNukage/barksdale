@@ -1,19 +1,17 @@
-scr_keybinds()
+camera_up = keyboard_check(ord("W"))
+camera_left = keyboard_check(ord("A"))
+camera_down = keyboard_check(ord("S"))
+camera_right = keyboard_check(ord("D"))
 
-camera_up = keybind_camera_up 
-camera_left = keybind_camera_left
-camera_down = keybind_camera_down
-camera_right = keybind_camera_right
+arrowright = keyboard_check_pressed(vk_right)
+arrowleft = keyboard_check_pressed(vk_left)
+arrowup_down = keyboard_check(vk_up)
+arrowdown_down = keyboard_check(vk_down)
 
-arrowright = keybind_arrowright
-arrowleft = keybind_arrowleft
-arrowup_down = keybind_arrowup_down
-arrowdown_down = keybind_arrowdown_down
+leftpress = mouse_check_button(mb_left)
+leftclick = mouse_check_button_pressed(mb_left)
+rightpress = mouse_check_button(mb_right)
+rightclick = mouse_check_button_pressed(mb_right)
 
-leftpress = keybind_leftpress
-leftclick = keybind_leftclick
-rightpress = keybind_rightpress
-rightclick = keybind_rightclick
-
-debugtoggle = keybind_debugtoggle
+debugtoggle = keyboard_check_pressed(vk_control)
 

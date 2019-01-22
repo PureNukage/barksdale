@@ -1,3 +1,7 @@
+///@function scr_gui_abilityclick(check?)
+///@description One of two functions: (1) Check if clicking on an ability and return 
+///@param 
+
 //This script is used for checking the mouse x and y coordinates against the ability buttons x and y
 
 //We are assuming that an object is selected and has abilities

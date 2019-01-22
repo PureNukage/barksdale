@@ -1,3 +1,7 @@
+///@function scr_random_color()
+///@description	Returns a random color
+
+
 var _random = 0
 
 _random[0] = irandom_range(1,255)

@@ -1,4 +1,4 @@
-if (rightclick and selection != 0) {
+if (selection != 0) {
 	// Object specific code at this point is a no-no; refactor this at some point
 	if object_get_name(selection.object_index) == "o_goon" {
 		with selection 
