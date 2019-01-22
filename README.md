@@ -4,4 +4,4 @@ Welcome to the city of Barksdale
 
 For documentation, please check out the [Wiki!](https://github.com/PureNukage/barksdale/wiki)
 
-Current [roadmap](https://github.com/PureNukage/barksdale/wiki/roadmap)
+Current [scratchpad](https://github.com/PureNukage/barksdale/wiki/scratchpad)
