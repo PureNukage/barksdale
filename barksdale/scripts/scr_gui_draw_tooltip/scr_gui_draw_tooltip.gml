@@ -1,3 +1,8 @@
+///@function scr_gui_draw_tooltip(abilitysocket,object_name)
+///@description Draws tooltip for an ability
+///@param abilitysocket
+///@param object_name
+
 var ability = argument[0]
 var object = argument[1]
 

@@ -1,3 +1,8 @@
+///@function scr_zone(object_index,abilitysocket)
+///@description This script is called an ability using 'zoning' is used
+///@param object_index
+///@param abilitysocket
+
 var _object_index = argument[0]
 var _ability_number = argument[1]
 

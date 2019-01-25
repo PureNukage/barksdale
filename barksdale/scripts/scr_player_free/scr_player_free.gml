@@ -1,2 +1,7 @@
-scr_leftclick()
-scr_rightclick()
+if (leftclick) {
+	scr_leftclick()
+}
+
+if (rightclick) {
+	scr_rightclick()
+}

@@ -1,3 +1,6 @@
+///@function scr_zone_green_array()
+///@description Returns an array containing booleans for walkable/unwalkable
+
 var zone_array
 
 //Loop through the zone

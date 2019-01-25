@@ -44,7 +44,7 @@ array_abilities_color_toggle_last = -1
 array_abilities_totals[house.vacant] = 1
 array_abilities_slots[house.vacant,0] = 1
 //Purchase House $100
-array_abilities_scr[house.vacant,0] = scr_house_purchase
+array_abilities_scr[house.vacant,0] = scr_house_upgrade
 array_abilities_type[house.vacant,0] = type.upgrade
 array_abilities_names[house.vacant,0] = "Purchase"
 array_abilities_price[house.vacant,0] = 100
@@ -62,7 +62,7 @@ array_abilities_slots[house.owned,1] = 0
 array_abilities_slots[house.owned,2] = 0
 array_abilities_slots[house.owned,3] = 1
 //Turn into Safehouse $200
-array_abilities_scr[house.owned,0] = scr_house_purchase
+array_abilities_scr[house.owned,0] = scr_house_upgrade
 array_abilities_type[house.owned,0] = type.upgrade
 array_abilities_names[house.owned,0] = "turn into\nsafehouse"
 array_abilities_price[house.owned,0] = 200	
@@ -74,7 +74,7 @@ array_abilities_tooltip[house.owned,0] = "A safehouse is used to recruit crew"
 array_abilities_scr[house.owned,3] = scr_house_bank
 array_abilities_type[house.owned,3]= type.ability
 array_abilities_names[house.owned,3] = "bank"
-array_abilities_tooltip[house.owned,3] = "Payments for the organization be pulled\nfrom this property"
+array_abilities_tooltip[house.owned,3] = "Payments for the organization will be\npulled from this property"
 
 #endregion
 
@@ -86,7 +86,7 @@ array_abilities_slots[house.safehouse,2] = 1
 array_abilities_slots[house.safehouse,3] = 1
 
 //Buy more goons
-array_abilities_scr[house.safehouse,1] = scr_house_product
+array_abilities_scr[house.safehouse,1] = scr_house_purchase
 array_abilities_type[house.safehouse,1] = type.purchase
 array_abilities_names[house.safehouse,1] = "buy\ngoon"
 array_abilities_price[house.safehouse,1] = 250
@@ -96,7 +96,7 @@ array_abilities_tooltip[house.safehouse,1] = "Hire some more muscle"
 
 
 //Buy more product
-array_abilities_scr[house.safehouse,2] = scr_house_product
+array_abilities_scr[house.safehouse,2] = scr_house_purchase
 array_abilities_type[house.safehouse,2] = type.purchase
 array_abilities_names[house.safehouse,2] = "buy\nproduct"
 array_abilities_price[house.safehouse,2] = 150

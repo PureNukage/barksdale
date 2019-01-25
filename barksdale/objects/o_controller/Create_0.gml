@@ -1,4 +1,3 @@
-scr_keybinds()
 scr_getinputs()
 scr_camera_setup()
 
@@ -17,16 +16,16 @@ day_previous = current_minute
 
 dontclick = false
 
-resource_money = 0
 bank = 0
+resource_money = 0
 resource_product = 0
 
 resource_product_price = 2
 
 enum initial_resource_count {
-	building_load,
-	count_resources,
-	stop_counting
+	building_load,										//	This is used to run scripts after all
+	count_resources,									//	objects have loaded into the room
+	stop_counting										//	(add objects to list, first resource count etc)
 }
 
 initial_resource_count = initial_resource_count.building_load
@@ -41,8 +40,8 @@ enum ownership {
 	world,
 }	
 
-array_ownership[ownership.player] = "You"
-array_ownership[ownership.world] = "World"
+array_ownership[ownership.player] = "You"		//	Text displayed for ownership of a unit	
+array_ownership[ownership.world] = "World"		
 
 var civ = instance_create_layer(0,0,"Instances",o_civilian)
 gui_ability_totalbuttons[o_civilian.object_index] = 0
@@ -54,16 +53,12 @@ zone_h = 0
 zone_ch = 0
 zone_cw = 0
 
-zone_object_index = 0
-zone_ability_id = 0
-
 #region Ability gui areas
 
 gui_ability_button_x1[0] = 453
 gui_ability_button_y1[0] = 624
 gui_ability_button_x2[0] = gui_ability_button_x1[0] + 79
 gui_ability_button_y2[0] = gui_ability_button_y1[0] + 79
-
 
 for(var i=1;i<5;i++) {
 	gui_ability_button_x1[i] = (gui_ability_button_x2[i-1])+5

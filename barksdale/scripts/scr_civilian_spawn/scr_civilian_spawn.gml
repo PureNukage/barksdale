@@ -1,3 +1,6 @@
+///@function scr_civilian_spawn()
+///@description Spawns a random amount of civilians
+
 var _totalhouses = instance_number(o_house)
 
 var _totalcivs = _totalhouses - 6

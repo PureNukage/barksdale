@@ -1,14 +1,12 @@
-//from the mouse x and y position, save the coordinates for a rectangle from zone_w and zone_h
-
+//	Jumping to the mouse...
 x = mouse_x-16
 y = mouse_y-16
 
-if !place_snapped(32,32) {
-	move_snap(32,32)
+//	...and snapping to the 32x32 grid
+if !place_snapped(cell_width,cell_height) {
+	move_snap(cell_width,cell_height)
 }
 
-_x = x
-_y = y
-
-start_x = x - (((o_controller.zone_cw-1)*32))
-start_y = y - (((o_controller.zone_ch-1)*32))
+//Getting the topleft pixel of the zone
+start_x = x - ((o_controller.zone_cw-1)*32)		
+start_y = y - ((o_controller.zone_ch-1)*32)

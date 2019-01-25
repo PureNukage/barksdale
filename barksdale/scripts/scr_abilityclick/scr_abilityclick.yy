@@ -1,8 +1,8 @@
 {
-    "id": "f3c2ea29-9f6a-420d-ac8b-7bd557ef0d5a",
+    "id": "b0a5f51c-b602-48a6-b28a-c40213eed1bb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_keybinds",
+    "name": "scr_abilityclick",
     "IsCompatibility": false,
     "IsDnD": false
 }
