@@ -19,6 +19,11 @@ if (point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),gui_deb
 	exit;
 }
 
+if (point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),1109,6,1274,63)) { 
+	crews_menu[? "Crews Menu"] = !crews_menu[? "Crews Menu"]
+	exit;
+}
+
 if (selection != 0 and scr_abilityclick()) { 
 	exit;
 }

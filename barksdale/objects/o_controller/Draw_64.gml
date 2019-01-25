@@ -23,6 +23,9 @@ draw_text(37+string_width(money),30,product)
 
 
 
+scr_gui_draw_crews()
+
+
 
 //Draw Debug
 if debug == true {
