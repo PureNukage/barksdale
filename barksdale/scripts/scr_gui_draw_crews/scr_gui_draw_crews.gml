@@ -64,6 +64,11 @@ if (crews_menu[? "Crew"] == true) {
 	draw_rectangle(1115,164,1267,197,false)				//	Crew Name plate
 	draw_rectangle(1115,203,1267,236,false)				//	Settings plate
 	
+	if leftclick and point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),1115,164,
+	1267,197) {		//	Changing name of crew
+		crews[| crew_selected] = get_string("Crew Name:","My Crew")
+	}
+	
 	draw_set_color(c_white)
 	draw_set_font(roboto_condensed_12)
 	draw_set_halign(fa_center)
@@ -72,16 +77,25 @@ if (crews_menu[? "Crew"] == true) {
 	draw_set_font(-1)
 	draw_set_halign(fa_left)
 	
-	if (selection != 0) and object_get_name(selection.object_index) == "o_goon" {
-
-	}
-	
 	var _y = 254
 	
 	for(var i=0;i<crew_size;i++) {
 		draw_set_color(c_front_gray)
 		draw_rectangle(1117,_y,1267,_y+35,false)
+		_y = _y+(i*35)+5
 	}
+	
+	if (selection !=0 and object_get_name(selection.object_index) == "o_goon") {
+		if selection.crew != crew_selected {
+			_y = _y+5
+			draw_set_color(c_front_gray)
+			draw_roundrect(1117,_y,1267,_y+35,false)
+			if leftclick and point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),
+			1117,_y,1267,_y+35,) {	//	Adding Goon to this crew
+				selection.crew = crew_selected
+			}
+		}
+	}	
 	
 }
 

@@ -1,4 +1,4 @@
-name = "Goon"
+name = scr_goon_name()
 portrait = s_portrait_goon
 selected = false 
 
@@ -22,6 +22,9 @@ zone_array = 0
 
 resource_money = 0
 resource_product = 0
+
+//Crew
+crew = -1
 
 enum goonjobs {
 	hopper
