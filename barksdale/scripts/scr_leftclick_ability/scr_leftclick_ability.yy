@@ -1,8 +1,8 @@
 {
-    "id": "ab2d3919-7b7d-4054-9c7a-1613075fb0b3",
+    "id": "b0a5f51c-b602-48a6-b28a-c40213eed1bb",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_leftclick",
+    "name": "scr_leftclick_ability",
     "IsCompatibility": false,
     "IsDnD": false
 }
