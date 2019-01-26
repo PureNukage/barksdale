@@ -28,9 +28,15 @@ if (crews_menu[? "Crews Menu"] == true) {
 					crew_selected = 1	
 					ds_list_insert(crews,0,"New Crew")
 				} else {													//  Selecting a crew
-					crews_menu[? "Crews Menu"] = false
-					crews_menu[? "Crew"] = true
-					crew_selected = i
+					if crews_menu[? "Crew"] == true {	//	Close out of Crew menu
+						crews_menu[? "Crew"] = false
+						crew_selected = -1
+						crews_menu[? "Crews Menu"] = false
+					} else {
+						crews_menu[? "Crews Menu"] = false
+						crews_menu[? "Crew"] = true
+						crew_selected = i
+					}
 				}	
 				return true
 			}
@@ -89,6 +95,11 @@ if (crews_menu[? "Crew"] == true) {
 		if selection.crew != crew_selected {
 			_y = _y+5
 			if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+35,) {	//	Adding Goon to this crew
+				//Check if this goon is in a crew already
+				if (selection.crew != -1) {
+					var pos = ds_list_find_index(crew[selection.crew],selection)
+					ds_list_delete(crew[selection.crew],pos)
+				}	
 				selection.crew = crew_selected
 				ds_list_insert(crew[crew_selected],0,selection.id)
 				return true
