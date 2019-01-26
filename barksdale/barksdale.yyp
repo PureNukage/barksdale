@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "bb08639d-077d-4f6a-86b5-063bd9659b82",
+            "Value": {
+                "id": "fed2d280-a1ab-4193-a98d-ed0231e69533",
+                "resourcePath": "fonts\\roboto_regular_20\\roboto_regular_20.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "bb4c1b85-6d4f-4799-9223-5d0182c262a9",
             "Value": {
                 "id": "fded4fb2-03aa-4222-8f49-d8d7ca58a4cd",
@@ -733,6 +741,14 @@
                 "resourcePath": "views\\fa4c500e-ccbf-46f8-9ff0-38d13706fa3f.yy",
                 "resourceType": "GMFolder"
             }
+        },
+        {
+            "Key": "ffcc82e4-89e0-4337-8dea-eff9403df1ef",
+            "Value": {
+                "id": "df053bff-859a-45b2-8998-cb31783c5bb3",
+                "resourcePath": "scripts\\scr_enums_and_macros\\scr_enums_and_macros.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -771,7 +787,8 @@
         "ec9e6e9e-a3c6-4ef0-af55-557f6b2b40a9",
         "2fed4424-61b3-4c22-9e4e-a747b239e275",
         "6af41055-0024-4a60-9225-97fbdd97297b",
-        "e227489a-584e-4979-81f7-3ae73784b453"
+        "e227489a-584e-4979-81f7-3ae73784b453",
+        "ffcc82e4-89e0-4337-8dea-eff9403df1ef"
     ],
     "tutorial": ""
 }

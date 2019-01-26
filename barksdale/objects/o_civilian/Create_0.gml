@@ -18,11 +18,6 @@ target_y = 0
 
 civilian_path = path_add()
 
-enum civstates {
-	idle,
-	move,
-}
-
 ownership = ownership.world
 
 civrandom = irandom_range(1,30)

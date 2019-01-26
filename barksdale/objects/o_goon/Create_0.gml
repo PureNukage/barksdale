@@ -26,10 +26,6 @@ resource_product = 0
 //Crew
 crew = -1
 
-enum goonjobs {
-	hopper
-}
-
 skip = false
 
 current_action = 0
@@ -64,16 +60,6 @@ ownership = ownership.player
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
 
 goon_path = path_add()
-
-enum goonstates {
-	idle,
-	move,
-}	
-
-enum goontasks {
-	roam,
-	deal,
-}
 
 goonjobs = goonjobs.hopper
 goonstates = goonstates.idle

@@ -11,19 +11,6 @@ ds_list_insert(o_controller.list_buildings,ds_list_size(o_controller.list_buildi
 
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
 
-enum house {
-	vacant,
-	owned,
-	safehouse,
-	
-}
-
-enum type {
-	upgrade,
-	ability,
-	purchase
-}
-
 ownership = ownership.world
 
 name[house.vacant] = "Vacant"

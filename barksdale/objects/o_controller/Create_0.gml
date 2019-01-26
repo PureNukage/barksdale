@@ -15,6 +15,9 @@ crews_menu = ds_map_create()
 crews_menu[? "Crews Menu"] = false
 crews_menu[? "Crew"] = false
 
+crews_menu_y = 0
+crew_y = 0
+
 crews = ds_list_create()
 ds_list_add(crews,"New Crew")
 
@@ -32,23 +35,11 @@ resource_product = 0
 
 resource_product_price = 2
 
-enum initial_resource_count {
-	building_load,										//	This is used to run scripts after all
-	count_resources,									//	objects have loaded into the room
-	stop_counting										//	(add objects to list, first resource count etc)
-}
-
 initial_resource_count = initial_resource_count.building_load
 
 //GUI Back Color
 c_front_gray = make_color_rgb(85,85,85)
 c_back_gray = make_color_rgb(54,54,54)
-
-//Ownership
-enum ownership {
-	player,
-	world,
-}	
 
 array_ownership[ownership.player] = "You"		//	Text displayed for ownership of a unit	
 array_ownership[ownership.world] = "World"		
@@ -100,11 +91,6 @@ for(var i=1;i<gui_debug_totalbuttons;i++) {
 
 list_buildings = ds_list_create()
 list_debug_objects = ds_list_create()
-
-enum playerstates {
-	free,
-	placement,
-}
 
 playerstates = playerstates.free
 
