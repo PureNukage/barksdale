@@ -14,6 +14,8 @@ selection_last = 0
 crews_menu = ds_map_create()
 crews_menu[? "Crews Menu"] = false
 crews_menu[? "Crew"] = false
+crews_menu[? "Members"] = false
+crews_menu[? "Settings"] = false
 
 crews = ds_list_create()
 ds_list_add(crews,"New Crew")

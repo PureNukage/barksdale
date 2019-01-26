@@ -5,7 +5,8 @@ if (point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),1109,6,
 	return true
 } 
 
-//Crews Menu Click
+#region Crews Menu Click
+
 if (crews_menu[? "Crews Menu"] == true) {
 	var window_size = (ds_list_size(crews)*47)+5
 	if point_in_rectangle(gui_x,gui_y,948,6,1103,6+window_size) {	//  Clicking inside Crews Menu
@@ -28,7 +29,7 @@ if (crews_menu[? "Crews Menu"] == true) {
 					crew_selected = 1	
 					ds_list_insert(crews,0,"New Crew")
 				} else {													//  Selecting a crew
-					if crews_menu[? "Crew"] == true {	//	Close out of Crew menu
+					if crews_menu[? "Crew"] == true and crew_selected == i {	//	Crew already open, close out of Crew menu
 						crews_menu[? "Crew"] = false
 						crew_selected = -1
 						crews_menu[? "Crews Menu"] = false
@@ -49,46 +50,85 @@ if (crews_menu[? "Crews Menu"] == true) {
 	
 }
 
-//Crew 
+#endregion
+
+#region Crew Click
+
 if (crews_menu[? "Crew"] == true) {
 	
-	var crew_size = ds_list_size(crew[crew_selected])
+	if crews_menu[? "Members"] == true {
+		var crew_size = ds_list_size(crew[crew_selected])
+		var _height = (crew_size*40)
+	} else if crews_menu[? "Settings"] == true {
+		var number_of_settings = 1
+		var _height = (number_of_settings*40)
+	} else {
+		var crew_size = 0
+		var number_of_settings = 0
+		var _height = 0	
+	}
 	
-	var _height = (crew_size*35)
-	
-	if point_in_rectangle(gui_x,gui_y,1109,157,1274,253+_height) {
+	if point_in_rectangle(gui_x,gui_y,1109,157,1274,288+_height) {
 	
 		//Changing Name of Crew
 		if point_in_rectangle(gui_x,gui_y,1115,164,1267,197) {
-			crews[| crew_selected] = get_string("Crew Name:","")	
+			crews[| crew_selected] = get_string("Crew Name:",crews[| crew_selected])	
 			return true
 		}		
-	
-		var _y = 254	
-		for(var i=1;i<crew_size+1;i++) {		// Checking if we're clicking a goon
-			if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
-				if (selection != 0 and selection.selected == true) { 
-					selection.selected = false
-				}
-				selection_last = selection
-				selection = ds_list_find_value(crew[crew_selected],i-1)
-				selection.selected = !selection.selected
-				if selection_last == selection {
-					selection.selected = false	
-					selection = 0
-				}
-				return true
-			}
-			_y = _y+(i*29)+5
-		}	
 		
-		return true
+		//Clicking Members
+		if point_in_rectangle(gui_x,gui_y,1115,203,1267,236) {
+			crews_menu[? "Members"] = !crews_menu[? "Members"]
+			crews_menu[? "Settings"] = false
+			return true
+		}
+		
+		//Clicking Settings
+		if point_in_rectangle(gui_x,gui_y,1115,242,1267,275) {
+			crews_menu[? "Settings"] = !crews_menu[? "Settings"]
+			crews_menu[? "Members"] = false
+			return true
+		}
+		
+		if crews_menu[? "Members"] == true {
+			//var crew_size = ds_list_size(crew[crew_selected])
+			var _y = 294	
+			for(var i=1;i<crew_size+1;i++) {		// Checking if we're clicking a goon
+				if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
+					if (selection != 0 and selection.selected == true) { 
+						selection.selected = false
+					}
+					selection_last = selection
+					selection = ds_list_find_value(crew[crew_selected],i-1)
+					selection.selected = !selection.selected
+					if selection_last == selection {
+						selection.selected = false	
+						selection = 0
+					}
+					return true
+				}
+				_y = _y+(i*29)+5
+			}	
+		}
 	
+			return true
+			
 		}			
-	var _y=254
-	for(var i=1;i<crew_size+1;i++) {
-		_y = _y+(i*29)+5	
+	
+	if crews_menu[? "Members"] == true {
+		var _y=294
+		for(var i=1;i<crew_size+1;i++) {
+			_y = _y+(i*29)+5	
+		}
+	} else if crews_menu[? "Settings"] == true {
+		var _y = 294
+		for(var i=1;i<number_of_settings+1;i++) {
+			_y = _y+(i*29)+5	
+		}
+	} else {
+		_y = 294	
 	}
+	
 	
 	//	If you have a goon selected
 	if (selection !=0 and object_get_name(selection.object_index) == "o_goon") {	
@@ -108,5 +148,7 @@ if (crews_menu[? "Crew"] == true) {
 	}	
 	
 }
+
+#endregion
 
 crews_menu[? "Crews Menu"] = false

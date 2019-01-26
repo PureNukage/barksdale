@@ -33,41 +33,67 @@ if (crews_menu[? "Crews Menu"] == true) {
 #region Crew
 
 if (crews_menu[? "Crew"] == true) {
-
-	var crew_size = ds_list_size(crew[crew_selected])
 	
-	var _height = (crew_size*35)
+	if crews_menu[? "Members"] == true {
+		var crew_size = ds_list_size(crew[crew_selected])
+		var _height = (crew_size*40)
+	} else if crews_menu[? "Settings"] == true {
+		var number_of_settings = 1
+		var _height = (number_of_settings*40)
+	} else {
+		var _height = 0	
+	}
 
 	draw_set_color(c_back_gray)
-	draw_roundrect(1109,157,1274,253+_height,false)
+	draw_roundrect(1109,157,1274,288+_height,false)
 	
-	draw_set_color(c_front_gray)
+	draw_set_color(make_color_rgb(85,86,98))
 	draw_rectangle(1115,164,1267,197,false)				//	Crew Name plate
-	draw_rectangle(1115,203,1267,236,false)				//	Settings plate
+	
+	if crews_menu[? "Members"] == true {
+		draw_set_color(c_selected_gray)
+	} else draw_set_color(c_front_gray)
+	draw_rectangle(1115,203,1267,236,false)				//	Members plate
+	if crews_menu[? "Settings"] == true {
+		draw_set_color(c_selected_gray)
+	} else draw_set_color(c_front_gray)
+	draw_rectangle(1115,242,1267,275,false)				//	Settings plate
 	
 	
 	draw_set_color(c_white)
 	draw_set_font(roboto_condensed_12)
 	draw_set_halign(fa_center)
 	draw_text(1191,169,crews[| crew_selected])			//	Crew Name text
-	draw_text(1191,208,"Settings")						//	Settings text
+	draw_text(1191,208,"Members")						//	Members text
+	draw_text(1191,247,"Settings")						//	Settings text
 	draw_set_font(-1)
 	draw_set_halign(fa_left)
 	
-	var _y = 254
+	if crews_menu[? "Members"] == true {
 	
-	for(var i=1;i<crew_size+1;i++) {
-		var _id = ds_list_find_value(crew[crew_selected],i-1)
-		if selection == _id {
-			draw_set_color(c_selected_gray)	
-		} else {
-			draw_set_color(c_front_gray)
+		var _y = 294
+	
+		for(var i=1;i<crew_size+1;i++) {
+			var _id = ds_list_find_value(crew[crew_selected],i-1)
+			if selection == _id {
+				draw_set_color(c_selected_gray)	
+			} else {
+				draw_set_color(c_front_gray)
+			}
+			draw_rectangle(1117,_y,1267,_y+29,false)
+			draw_set_color(c_white)		
+			draw_text(1125,_y+5,_id.name)
+			_y = _y+(i*29)+5
 		}
-		draw_rectangle(1117,_y,1267,_y+29,false)
-		draw_set_color(c_white)		
-		draw_text(1125,_y+5,_id.name)
-		_y = _y+(i*29)+5
-	}
+	} else if crews_menu[? "Settings"] == true {
+		var _y = 294
+		for(var i=1;i<number_of_settings+1;i++) {
+			_y = _y+(i*29)+5	
+		}
+		
+	} else {
+		var _y = 294
+	}	
 	
 	if (selection !=0 and object_get_name(selection.object_index) == "o_goon") {
 		if selection.crew != crew_selected {
