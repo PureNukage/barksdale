@@ -18,6 +18,7 @@ crews_menu[? "Crew"] = false
 crews = ds_list_create()
 ds_list_add(crews,"New Crew")
 
+crew_selected = -1
 
 //Time
 day_current = current_minute
