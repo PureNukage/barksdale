@@ -15,9 +15,6 @@ crews_menu = ds_map_create()
 crews_menu[? "Crews Menu"] = false
 crews_menu[? "Crew"] = false
 
-crews_menu_y = 0
-crew_y = 0
-
 crews = ds_list_create()
 ds_list_add(crews,"New Crew")
 
@@ -40,6 +37,8 @@ initial_resource_count = initial_resource_count.building_load
 //GUI Back Color
 c_front_gray = make_color_rgb(85,85,85)
 c_back_gray = make_color_rgb(54,54,54)
+
+c_selected_gray = make_color_rgb(141,141,141)
 
 array_ownership[ownership.player] = "You"		//	Text displayed for ownership of a unit	
 array_ownership[ownership.world] = "World"		

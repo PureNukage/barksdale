@@ -57,10 +57,14 @@ if (crews_menu[? "Crew"] == true) {
 	var _y = 254
 	
 	for(var i=1;i<crew_size+1;i++) {
-		draw_set_color(c_front_gray)
-		draw_rectangle(1117,_y,1267,_y+29,false)
-		draw_set_color(c_white)
 		var _id = ds_list_find_value(crew[crew_selected],i-1)
+		if selection == _id {
+			draw_set_color(c_selected_gray)	
+		} else {
+			draw_set_color(c_front_gray)
+		}
+		draw_rectangle(1117,_y,1267,_y+29,false)
+		draw_set_color(c_white)		
 		draw_text(1125,_y+5,_id.name)
 		_y = _y+(i*29)+5
 	}
@@ -74,6 +78,7 @@ if (crews_menu[? "Crew"] == true) {
 			draw_set_font(roboto_condensed_12)
 			draw_set_halign(fa_center)
 			draw_text(1200,_y+8,selection.name)
+			draw_set_halign(fa_left)
 			draw_set_font(-1)
 		}
 	}	

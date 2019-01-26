@@ -48,7 +48,7 @@ if (crews_menu[? "Crew"] == true) {
 	
 	var crew_size = ds_list_size(crew[crew_selected])
 	
-	var _height = (crew_size*34)
+	var _height = (crew_size*35)
 	
 	if point_in_rectangle(gui_x,gui_y,1109,157,1274,253+_height) {
 	
@@ -56,15 +56,33 @@ if (crews_menu[? "Crew"] == true) {
 		if point_in_rectangle(gui_x,gui_y,1115,164,1267,197) {
 			crews[| crew_selected] = get_string("Crew Name:","")	
 			return true
-		}
+		}		
+	
+		var _y = 254	
+		for(var i=1;i<crew_size+1;i++) {		// Checking if we're clicking a goon
+			if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
+				if (selection != 0 and selection.selected == true) { 
+					selection.selected = false
+				}
+				selection_last = selection
+				selection = ds_list_find_value(crew[crew_selected],i-1)
+				selection.selected = !selection.selected
+				if selection_last == selection {
+					selection.selected = false	
+					selection = 0
+				}
+				return true
+			}
+			_y = _y+(i*29)+5
+		}	
 		
 		return true
-	}
 	
-	var _y = 254	
+		}			
+	var _y=254
 	for(var i=1;i<crew_size+1;i++) {
-		_y = _y+(i*29)+5
-	}	
+		_y = _y+(i*29)+5	
+	}
 	
 	//	If you have a goon selected
 	if (selection !=0 and object_get_name(selection.object_index) == "o_goon") {	
@@ -77,7 +95,6 @@ if (crews_menu[? "Crew"] == true) {
 			}
 		}
 	}	
-	
 	
 }
 
