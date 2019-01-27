@@ -71,8 +71,8 @@ if (crews_menu[? "Crew"] == true) {
 	
 	if crews_menu[? "Members"] == true {
 	
+		//	Drawing the members of this crew
 		var _y = 294
-	
 		for(var i=1;i<crew_size+1;i++) {
 			var _id = ds_list_find_value(crew[crew_selected],i-1)
 			if selection == _id {
@@ -80,14 +80,23 @@ if (crews_menu[? "Crew"] == true) {
 			} else {
 				draw_set_color(c_front_gray)
 			}
-			draw_rectangle(1117,_y,1267,_y+29,false)
+			draw_roundrect(1117,_y,1267,_y+29,false)
 			draw_set_color(c_white)		
 			draw_text(1125,_y+5,_id.name)
 			_y = _y+(i*29)+5
 		}
 	} else if crews_menu[? "Settings"] == true {
+		
+		//	Drawing the settings this crew has 
 		var _y = 294
 		for(var i=1;i<number_of_settings+1;i++) {
+			draw_set_color(c_front_gray)
+			draw_roundrect(1117,_y,1267,_y+29,false)
+			draw_set_color(c_white)
+			switch(i) {
+				case 1: draw_text(1125,_y+5,"stash: none")
+				//case 2: draw_text(1125,_y+5,"place zone")
+			}
 			_y = _y+(i*29)+5	
 		}
 		

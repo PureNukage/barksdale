@@ -91,7 +91,6 @@ if (crews_menu[? "Crew"] == true) {
 		}
 		
 		if crews_menu[? "Members"] == true {
-			//var crew_size = ds_list_size(crew[crew_selected])
 			var _y = 294	
 			for(var i=1;i<crew_size+1;i++) {		// Checking if we're clicking a goon
 				if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
