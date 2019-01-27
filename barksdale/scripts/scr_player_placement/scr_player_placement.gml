@@ -81,10 +81,9 @@ if (leftclick) {
 	
 	var list = crew_zone_x[crew_selected]
 	ds_list_add(list,placement.start_x)
-	show_message(string(placement.start_x))
 	var list = crew_zone_y[crew_selected]
 	ds_list_add(list,placement.start_y)	
-	show_message(string(placement.start_y))
+
 
 	
 	#endregion

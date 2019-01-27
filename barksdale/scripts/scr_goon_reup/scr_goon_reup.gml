@@ -30,9 +30,6 @@ var goal_array = scr_goon_zonespace()
 goalX = goal_array[0]
 goalY = goal_array[1]
 
-show_message(string(goalX))
-show_message(string(goalY))
-
 if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,mp_grid,true) {
 	current_action = 0
 	skip = false
