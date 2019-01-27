@@ -122,6 +122,12 @@ if (crews_menu[? "Crew"] == true) {
 	} else if crews_menu[? "Settings"] == true {
 		var _y = 294
 		for(var i=1;i<number_of_settings+1;i++) {
+			if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
+				if i == 1 {
+					scr_crew_settings_stash()	
+					return true
+				}
+			}
 			_y = _y+(i*29)+5	
 		}
 	} else {

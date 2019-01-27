@@ -90,7 +90,10 @@ if (crews_menu[? "Crew"] == true) {
 		//	Drawing the settings this crew has 
 		var _y = 294
 		for(var i=1;i<number_of_settings+1;i++) {
-			draw_set_color(c_front_gray)
+			if i == 1 and crews_menu[? "Settings:Stash"] == true {
+				draw_set_color(c_selected_gray)
+			} else draw_set_color(c_front_gray)
+			
 			draw_roundrect(1117,_y,1267,_y+29,false)
 			draw_set_color(c_white)
 			switch(i) {

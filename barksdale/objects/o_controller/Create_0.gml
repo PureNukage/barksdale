@@ -16,9 +16,14 @@ crews_menu[? "Crews Menu"] = false
 crews_menu[? "Crew"] = false
 crews_menu[? "Members"] = false
 crews_menu[? "Settings"] = false
+crews_menu[? "Settings:Stash"] = false
 
 crews = ds_list_create()
 ds_list_add(crews,"New Crew")
+
+//Crew Settings
+//Stash
+list_crew_settings_stash = ds_list_create()
 
 crew_selected = -1
 
