@@ -19,11 +19,18 @@ crews_menu[? "Settings"] = false
 crews_menu[? "Settings:Stash"] = false
 
 crews = ds_list_create()
-ds_list_add(crews,"New Crew")
+ds_list_add(crews,"New Crew")	//	List containing the name of the Crews
+
+//Additionally, an array 'crew' is created. 
+//  crew[0] == new crew
+//  crew[1] == 'new crew' but is the first crew created 
 
 //Crew Settings
 //Stash
 list_crew_settings_stash = ds_list_create()
+
+//	Crew stashes are made on crew creation
+//	crew_stash[0] == id
 
 crew_selected = -1
 

@@ -23,6 +23,8 @@ if (crews_menu[? "Crews Menu"] == true) {
 					if (ds_list_size(crews) == 1) {	//	If this is the first Crew to be made
 						crew[0] = ds_list_create()
 						crew[1] = ds_list_create()
+						crew_stash[0] = 0
+						crew_stash[1] = 0
 					} else {
 						scr_crew_create()
 					}
@@ -131,6 +133,23 @@ if (crews_menu[? "Crew"] == true) {
 	if crews_menu[? "Settings:Stash"] == true {
 		var menu_height = ((ds_list_size(list_crew_settings_stash))*35)-35
 		if point_in_rectangle(gui_x,gui_y,938,294,1103,333+menu_height) {
+			var stash_y = 299
+			for(var c=0;c<ds_list_size(list_crew_settings_stash);c++) {
+				var house_id = ds_list_find_value(list_crew_settings_stash,c)
+				if point_in_rectangle(gui_x,gui_y,946,stash_y,1096,stash_y+29) {
+					
+					//	If we're clicking a menu-item house we own 
+					if crew_stash[crew_selected] != 0 {
+						//  Already have a stash for this crew
+						crew_stash[crew_selected].stash = -1
+						crew_stash[crew_selected] = 0
+					}
+					crew_stash[crew_selected] = house_id
+					house_id.stash = crew_selected					
+					return true
+				}
+				stash_y = stash_y+34
+			}
 			return true	
 		} else {
 			crews_menu[? "Settings:Stash"] = false	
