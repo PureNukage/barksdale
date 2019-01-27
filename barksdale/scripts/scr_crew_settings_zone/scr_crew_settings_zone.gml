@@ -2,6 +2,7 @@ zone_h = 1
 zone_w = 1
 zone_ch = 1
 zone_cw = 1
+zone_array = 0
 var placement = instance_create_layer(mouse_x,mouse_y,"Instances",o_placement)
 placement.start_x = mouse_x
 placement.start_y = mouse_y

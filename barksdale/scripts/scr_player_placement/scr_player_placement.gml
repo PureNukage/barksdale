@@ -7,6 +7,9 @@ if (rightclick) {
 	if instance_exists(o_placement) {
 		with o_placement { instance_destroy() }
 	}
+	
+	#region Goon Zone
+	
 	if goonzone == true {
 		if selection.array_abilities_color_toggle != -1 {
 			selection.array_abilities_colors[selection.array_abilities_color_toggle] = 0
@@ -14,14 +17,19 @@ if (rightclick) {
 		}		
 		goonzone = false
 	}	
+	
+	#endregion
+	
 	if crews_menu[? "Settings:Zone"] == true crews_menu[? "Settings:Zone"] = false	
 	playerstates = playerstates.free	
 }
 	
-if (leftclick) {			// i believe this only works with the deal ability, not sure
+if (leftclick) {
 	if instance_exists(o_placement) {	
 		var placement = o_placement.id
 	}
+	
+	#region Goon Zone	
 	
 	if goonzone == true {
 		with selection 
@@ -64,4 +72,16 @@ if (leftclick) {			// i believe this only works with the deal ability, not sure
 		
 		goonzone = false
 	}
+	
+	#endregion
+	
+	#region Crew Zone
+	
+	var list = crew_zone_x[crew_selected]
+	ds_list_add(list,placement.start_x)
+	var list = crew_zone_y[crew_selected]
+	ds_list_add(list,placement.start_y)	
+
+	
+	#endregion
 }

@@ -25,6 +25,10 @@ if (crews_menu[? "Crews Menu"] == true) {
 						crew[1] = ds_list_create()
 						crew_stash[0] = 0
 						crew_stash[1] = 0
+						crew_zone_x[0] = ds_list_create()
+						crew_zone_y[0] = ds_list_create()
+						crew_zone_x[1] = ds_list_create()
+						crew_zone_y[1] = ds_list_create()
 					} else {
 						scr_crew_create()
 					}

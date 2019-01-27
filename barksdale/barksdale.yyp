@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "62157b71-d469-4294-88a5-af410343127e",
+            "Value": {
+                "id": "b6ca2efa-f13f-4e06-9e94-2cc7d6e3abca",
+                "resourcePath": "scripts\\scr_crew_zonecheck\\scr_crew_zonecheck.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "629aa986-2fff-4eeb-a7cf-f2df4b44c00a",
             "Value": {
                 "id": "c276dc3a-7dbf-45ee-be14-4b37a144ea3e",
@@ -796,6 +804,7 @@
         "ed813303-b733-4778-8b8c-1aa9d8becb06",
         "26b46062-97da-4b70-96e9-5f649a675551",
         "3375db94-8588-4f5d-b810-438edf803300",
+        "62157b71-d469-4294-88a5-af410343127e",
         "a87dd040-1cd8-4f86-bf42-3192e0d414ce",
         "25e33c21-64d2-459f-beae-612ecaa33f77",
         "52d1a6ca-97bf-42f5-a6a0-ea1484a0fdf3",
