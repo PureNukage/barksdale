@@ -100,7 +100,30 @@ if (crews_menu[? "Crew"] == true) {
 				case 1: draw_text(1125,_y+5,"stash: none")
 				//case 2: draw_text(1125,_y+5,"place zone")
 			}
-			_y = _y+(i*29)+5	
+			_y = _y+(i*29)+5
+			
+			//Drawing Stash menu
+			if crews_menu[? "Settings:Stash"] == true {
+				draw_set_color(c_back_gray)
+				var menu_height = ((ds_list_size(list_crew_settings_stash))*35)-35
+				draw_roundrect(938,294,1103,333+menu_height,false)
+				var stash_y = 299
+				for(var c=0;c<ds_list_size(list_crew_settings_stash);c++) {
+					var house_id = ds_list_find_value(list_crew_settings_stash,c)
+					if object_get_name(house_id.object_index) != "o_controller" {
+					if house_id.stash == crew_selected {
+						draw_set_color(c_selected_gray)	
+					} else 
+					draw_set_color(c_front_gray)
+					draw_roundrect(946,stash_y,1096,stash_y+29,false)
+					draw_set_color(c_white)
+					var stash_name = house_id.building_type + " - " + house_id.name[house_id.house]
+					draw_text(956,stash_y+7,string(stash_name))	
+					stash_y = stash_y+(c*29)+5
+					}
+				}
+			}
+			
 		}
 		
 	} else {

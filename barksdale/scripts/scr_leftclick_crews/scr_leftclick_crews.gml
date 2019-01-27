@@ -108,11 +108,34 @@ if (crews_menu[? "Crew"] == true) {
 				}
 				_y = _y+(i*29)+5
 			}	
+		} else if crews_menu[? "Settings"] == true {
+			var _y = 294
+			for(var i=1;i<number_of_settings+1;i++) {
+				if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
+					if i == 1 {
+						scr_crew_settings_stash()	//	Clicking on stash ability
+						return true
+					}
+				}
+				_y = _y+(i*29)+5	
+				
+			}
+			
 		}
 	
-			return true
+	return true
 			
-		}			
+	}		
+	
+	//	Stash Menu
+	if crews_menu[? "Settings:Stash"] == true {
+		var menu_height = ((ds_list_size(list_crew_settings_stash))*35)-35
+		if point_in_rectangle(gui_x,gui_y,938,294,1103,333+menu_height) {
+			return true	
+		} else {
+			crews_menu[? "Settings:Stash"] = false	
+		}
+	}	
 	
 	if crews_menu[? "Members"] == true {
 		var _y=294
@@ -122,12 +145,6 @@ if (crews_menu[? "Crew"] == true) {
 	} else if crews_menu[? "Settings"] == true {
 		var _y = 294
 		for(var i=1;i<number_of_settings+1;i++) {
-			if point_in_rectangle(gui_x,gui_y,1117,_y,1267,_y+29) {
-				if i == 1 {
-					scr_crew_settings_stash()	
-					return true
-				}
-			}
 			_y = _y+(i*29)+5	
 		}
 	} else {
