@@ -39,6 +39,8 @@ list_crew_settings_stash = ds_list_create()
 //  crew_zone_x[0] == ds_list_create()
 //  crew_zone_y[0] == ds_list_create()
 
+//  crew_zone_
+
 crew_selected = -1
 
 //Time

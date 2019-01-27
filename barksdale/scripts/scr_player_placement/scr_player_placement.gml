@@ -46,7 +46,7 @@ if (leftclick) {
 			start_y = placement.start_y
 			zone_array = scr_zone_green_array()
 		
-			if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,grid,true) {
+			if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,mp_grid,true) {
 				pos = 1
 				x_goto = path_get_point_x(goon_path,pos)
 				y_goto = path_get_point_y(goon_path,pos)
@@ -71,16 +71,20 @@ if (leftclick) {
 		zone_array = 0
 		
 		goonzone = false
+		exit;
 	}
 	
 	#endregion
 	
 	#region Crew Zone
 	
+	
 	var list = crew_zone_x[crew_selected]
 	ds_list_add(list,placement.start_x)
+	show_message(string(placement.start_x))
 	var list = crew_zone_y[crew_selected]
 	ds_list_add(list,placement.start_y)	
+	show_message(string(placement.start_y))
 
 	
 	#endregion
