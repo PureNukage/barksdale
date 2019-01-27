@@ -38,7 +38,7 @@ if (crews_menu[? "Crew"] == true) {
 		var crew_size = ds_list_size(crew[crew_selected])
 		var _height = (crew_size*40)
 	} else if crews_menu[? "Settings"] == true {
-		var number_of_settings = 1
+		var number_of_settings = 2
 		var _height = (number_of_settings*40)
 	} else {
 		var _height = 0	
@@ -96,6 +96,12 @@ if (crews_menu[? "Crew"] == true) {
 				draw_set_color(c_selected_gray)
 			} else draw_set_color(c_front_gray)
 			
+			if i == 2 and crews_menu[? "Settings:Zone"] == true {
+				draw_set_color(c_selected_gray)	
+			} else if i == 2 and crews_menu[? "Settings:Zone"] = false {
+				draw_set_color(c_front_gray)
+			}
+			
 			draw_roundrect(1117,_y,1267,_y+29,false)
 			draw_set_color(c_white)
 			switch(i) {
@@ -104,10 +110,9 @@ if (crews_menu[? "Crew"] == true) {
 						draw_text(1125,_y+5,"stash: Set")
 					} else {
 						draw_text(1125,_y+5,"stash: none")	
-					}
-				
+					}				
 				break;
-				//case 2: draw_text(1125,_y+5,"place zone")
+				case 2: draw_text(1125,_y+5,"place zone")
 			}
 			_y = _y+(i*29)+5
 			

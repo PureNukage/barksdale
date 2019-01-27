@@ -1,8 +1,8 @@
 {
-    "id": "a079c2c2-66e3-4a5b-83ce-ebe54f80dc07",
+    "id": "3375db94-8588-4f5d-b810-438edf803300",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_player_selection",
+    "name": "scr_crew_settings_zone",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "016704d9-b1ab-41eb-a742-87ee38af7d27",
+            "Value": {
+                "id": "dd0553c9-8689-42e1-b43c-bc2980d4453b",
+                "resourcePath": "views\\016704d9-b1ab-41eb-a742-87ee38af7d27.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "02e81a00-d41b-4c2b-86fd-84f29e2935e5",
             "Value": {
                 "id": "57177d64-77bb-469a-8fda-c561f6056d6e",
@@ -180,6 +188,14 @@
                 "id": "9e9dc791-5b8d-443a-9470-d28b2371a8e5",
                 "resourcePath": "views\\33614fb6-5347-4c18-9ee8-e3a2adda8780.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3375db94-8588-4f5d-b810-438edf803300",
+            "Value": {
+                "id": "457b3054-4d38-4d5f-a7a1-4ad05f8f75ce",
+                "resourcePath": "scripts\\scr_crew_settings_zone\\scr_crew_settings_zone.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -460,14 +476,6 @@
                 "id": "62e9e8e1-3f52-40b4-a92d-982347ba9475",
                 "resourcePath": "views\\9f53a92f-4d05-4cb1-8313-37555cce3aee.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "a079c2c2-66e3-4a5b-83ce-ebe54f80dc07",
-            "Value": {
-                "id": "ba593270-17d2-4c33-b15b-210d96608880",
-                "resourcePath": "scripts\\scr_player_selection\\scr_player_selection.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -784,9 +792,10 @@
         "83e63c1b-a606-4e34-8a84-99a429a19abe",
         "1ba86203-0389-4b0b-80e5-979fb4218fd9",
         "1cd1a766-2086-4612-a494-6b25ff64f30a",
-        "a079c2c2-66e3-4a5b-83ce-ebe54f80dc07",
         "906547ce-a1df-43b7-8a64-060d1766da54",
         "ed813303-b733-4778-8b8c-1aa9d8becb06",
+        "26b46062-97da-4b70-96e9-5f649a675551",
+        "3375db94-8588-4f5d-b810-438edf803300",
         "a87dd040-1cd8-4f86-bf42-3192e0d414ce",
         "25e33c21-64d2-459f-beae-612ecaa33f77",
         "52d1a6ca-97bf-42f5-a6a0-ea1484a0fdf3",
@@ -805,7 +814,6 @@
         "2fed4424-61b3-4c22-9e4e-a747b239e275",
         "6af41055-0024-4a60-9225-97fbdd97297b",
         "e227489a-584e-4979-81f7-3ae73784b453",
-        "26b46062-97da-4b70-96e9-5f649a675551",
         "ffcc82e4-89e0-4337-8dea-eff9403df1ef"
     ],
     "tutorial": ""

@@ -62,7 +62,7 @@ if (crews_menu[? "Crew"] == true) {
 		var crew_size = ds_list_size(crew[crew_selected])
 		var _height = (crew_size*40)
 	} else if crews_menu[? "Settings"] == true {
-		var number_of_settings = 1
+		var number_of_settings = 2
 		var _height = (number_of_settings*40)
 	} else {
 		var crew_size = 0
@@ -118,6 +118,10 @@ if (crews_menu[? "Crew"] == true) {
 						scr_crew_settings_stash()	//	Clicking on stash ability
 						return true
 					}
+					if i == 2 {					//	Placing zone
+						scr_crew_settings_zone()
+						return true
+					}
 				}
 				_y = _y+(i*29)+5	
 				
@@ -140,14 +144,23 @@ if (crews_menu[? "Crew"] == true) {
 					
 					//	If we're clicking a menu-item house we own 
 					if crew_stash[crew_selected] != 0 {
-						//  Already have a stash for this crew
+						//  Already have a stash for this crew! Deselecting it
 						crew_stash[crew_selected].stash = -1
 						crew_stash[crew_selected] = 0
-					}
-					crew_stash[crew_selected] = house_id
-					house_id.stash = crew_selected					
-					return true
+					} 
+					if crew_stash[crew_selected] == house_id {
+						//  This is our stash already, deselect 
+						crew_stash[crew_selected] = 0
+						house_id.stash = -1
+						return true
+					} else {
+						// Select Stash
+						crew_stash[crew_selected] = house_id
+						house_id.stash = crew_selected					
+						return true
+					}	
 				}
+				
 				stash_y = stash_y+34
 			}
 			return true	
