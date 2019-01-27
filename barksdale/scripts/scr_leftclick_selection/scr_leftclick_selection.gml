@@ -1,29 +1,3 @@
-///@function scr_leftclick()
-///@description 
-///@param 
-
-
-/*
-	This code is currently used with "o_controller". 
-	
-	The function is used to select objects on the screen with a leftclick.
-																								*/
-																								
-//Gui layer click
-
-if (point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),gui_debug_button_x1[0],gui_debug_button_y1[0],
-													 gui_debug_button_x2[0],gui_debug_button_y2[0])
-	and debug == true) {
-	//If clicking on debug button 1
-	scr_civilian_spawn()
-	exit;
-}
-
-if (selection != 0 and scr_abilityclick()) { 
-	exit;
-}
-																								
-																								
 if (instance_position(mouse_x,mouse_y,all)) {		//	If clicking any object
 	
 	if (selection != 0 and selection.selected == true) {		//  We already have an object selected

@@ -10,6 +10,39 @@ debug_scroll = 0
 selection = 0
 selection_last = 0
 
+goonzone = 0			//	Temp var used to differntiate between goon zone and crew zone
+
+//Crew 
+crews_menu = ds_map_create()
+crews_menu[? "Crews Menu"] = false
+crews_menu[? "Crew"] = false
+crews_menu[? "Members"] = false
+crews_menu[? "Settings"] = false
+crews_menu[? "Settings:Stash"] = false
+crews_menu[? "Settings:Zone"] = false
+
+crews = ds_list_create()
+ds_list_add(crews,"New Crew")	//	List containing the name of the Crews
+
+//Additionally, an array 'crew' is created. 
+//  crew[0] == new crew
+//  crew[1] == 'new crew' but is the first crew created 
+
+//Crew Settings
+//Stash
+list_crew_settings_stash = ds_list_create()
+
+//	Crew stashes are made on crew creation
+//	crew_stash[0] == id
+
+//  Crew zones are made on crew creation
+//  crew_zone_x[0] == ds_list_create()
+//  crew_zone_y[0] == ds_list_create()
+
+//  crew_zone_
+
+crew_selected = -1
+
 //Time
 day_current = current_minute
 day_previous = current_minute
@@ -22,23 +55,13 @@ resource_product = 0
 
 resource_product_price = 2
 
-enum initial_resource_count {
-	building_load,										//	This is used to run scripts after all
-	count_resources,									//	objects have loaded into the room
-	stop_counting										//	(add objects to list, first resource count etc)
-}
-
 initial_resource_count = initial_resource_count.building_load
 
 //GUI Back Color
 c_front_gray = make_color_rgb(85,85,85)
 c_back_gray = make_color_rgb(54,54,54)
 
-//Ownership
-enum ownership {
-	player,
-	world,
-}	
+c_selected_gray = make_color_rgb(141,141,141)
 
 array_ownership[ownership.player] = "You"		//	Text displayed for ownership of a unit	
 array_ownership[ownership.world] = "World"		
@@ -90,11 +113,6 @@ for(var i=1;i<gui_debug_totalbuttons;i++) {
 
 list_buildings = ds_list_create()
 list_debug_objects = ds_list_create()
-
-enum playerstates {
-	free,
-	placement,
-}
 
 playerstates = playerstates.free
 

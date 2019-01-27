@@ -6,23 +6,12 @@ building_type = "House"
 resource_money = 0
 resource_product = 0
 
+stash = -1			//	Used with Hopper crews
+
 //Add to list of buildings
 ds_list_insert(o_controller.list_buildings,ds_list_size(o_controller.list_buildings),id)
 
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
-
-enum house {
-	vacant,
-	owned,
-	safehouse,
-	
-}
-
-enum type {
-	upgrade,
-	ability,
-	purchase
-}
 
 ownership = ownership.world
 

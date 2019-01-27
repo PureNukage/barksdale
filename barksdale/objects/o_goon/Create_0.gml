@@ -1,4 +1,4 @@
-name = "Goon"
+name = scr_goon_name()
 portrait = s_portrait_goon
 selected = false 
 
@@ -23,9 +23,8 @@ zone_array = 0
 resource_money = 0
 resource_product = 0
 
-enum goonjobs {
-	hopper
-}
+//Crew
+crew = -1
 
 skip = false
 
@@ -61,16 +60,6 @@ ownership = ownership.player
 ds_list_insert(o_controller.list_debug_objects,ds_list_size(o_controller.list_debug_objects),id)
 
 goon_path = path_add()
-
-enum goonstates {
-	idle,
-	move,
-}	
-
-enum goontasks {
-	roam,
-	deal,
-}
 
 goonjobs = goonjobs.hopper
 goonstates = goonstates.idle

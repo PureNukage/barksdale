@@ -1,8 +1,8 @@
 {
-    "id": "ab2d3919-7b7d-4054-9c7a-1613075fb0b3",
+    "id": "ffcc82e4-89e0-4337-8dea-eff9403df1ef",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_leftclick",
+    "name": "scr_enums_and_macros",
     "IsCompatibility": false,
     "IsDnD": false
 }
