@@ -38,4 +38,5 @@ if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,mp_grid,true) {
 	x_goto = path_get_point_x(goon_path,pos)
 	y_goto = path_get_point_y(goon_path,pos)
 	goonstates = goonstates.move
+	goontasks = goontasks.deal
 }
