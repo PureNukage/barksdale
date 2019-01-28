@@ -2,10 +2,10 @@
 var portrait = selection.portrait
 draw_sprite(portrait,0,32,471)		//Drawing portrait
 
-draw_set_color(c_front_gray)
+draw_set_color(c_front_gui)
 draw_roundrect(285,491,440,522,false)	//Drawing nameplate
 
-draw_set_color(c_front_gray)
+draw_set_color(c_front_gui)
 draw_roundrect(285,528,359,559,false)	//Drawing (building_type/job) panel
 draw_roundrect(366,528,440,559,false)	//Drawing ownership panel
 draw_roundrect(285,634,440,698,false)	//Drawing Inventory panel
@@ -96,9 +96,9 @@ for(var i=0;i<5;i++) {
 		}
 	
 		if (selection.array_abilities_color_toggle == i or selection.array_abilities_colors[i] == true){
-			draw_set_color(c_front_gray)			
+			draw_set_color(c_front_gui)			
 		} else {
-			draw_set_color(c_back_gray)	
+			draw_set_color(c_back_gui)	
 		}
 		draw_roundrect(gui_ability_button_x1[i],gui_ability_button_y1[i],
 		gui_ability_button_x2[i],gui_ability_button_y2[i],false)

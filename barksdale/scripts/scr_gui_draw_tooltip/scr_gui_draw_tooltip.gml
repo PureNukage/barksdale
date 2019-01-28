@@ -6,9 +6,9 @@
 var ability = argument[0]
 var object = argument[1]
 
-draw_set_color(c_back_gray)
+draw_set_color(c_back_gui)
 draw_roundrect(23,325,448,456,false)
-draw_set_color(c_front_gray)
+draw_set_color(c_front_gui)
 draw_rectangle(29,330,442,451,false)
 
 switch(object)

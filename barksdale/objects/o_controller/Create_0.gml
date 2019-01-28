@@ -58,10 +58,10 @@ resource_product_price = 2
 initial_resource_count = initial_resource_count.building_load
 
 //GUI Back Color
-c_front_gray = make_color_rgb(85,85,85)
-c_back_gray = make_color_rgb(54,54,54)
+c_front_gui = make_color_rgb(85,85,85)
+c_back_gui = make_color_rgb(54,54,54)
 
-c_selected_gray = make_color_rgb(141,141,141)
+c_selected_gui = make_color_rgb(141,141,141)
 
 array_ownership[ownership.player] = "You"		//	Text displayed for ownership of a unit	
 array_ownership[ownership.world] = "World"		

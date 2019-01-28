@@ -1,5 +1,5 @@
 //Crew Button
-draw_set_color(c_back_gray)
+draw_set_color(c_back_gui)
 draw_roundrect_ext(1109,6,1274,63,2,2,false)
 draw_set_color(c_white)
 draw_set_font(roboto_regular_20)
@@ -9,12 +9,12 @@ draw_set_font(-1)
 #region Crews Menu
 
 if (crews_menu[? "Crews Menu"] == true) {
-	draw_set_color(c_back_gray)
+	draw_set_color(c_back_gui)
 	var window_size = (ds_list_size(crews)*47)+5
 	draw_roundrect_ext(948,6,1103,6+window_size,2,2,false)
 	var _y1 = 11
 	for(var i=0;i<ds_list_size(crews);i++) {
-		draw_set_color(c_front_gray)
+		draw_set_color(c_front_gui)
 		draw_roundrect_ext(954,_y1,1096,_y1+41,2,2,false)
 		draw_set_color(c_white)
 		draw_set_halign(fa_center)
@@ -44,19 +44,19 @@ if (crews_menu[? "Crew"] == true) {
 		var _height = 0	
 	}
 
-	draw_set_color(c_back_gray)
+	draw_set_color(c_back_gui)
 	draw_roundrect(1109,157,1274,288+_height,false)
 	
 	draw_set_color(make_color_rgb(85,86,98))
 	draw_rectangle(1115,164,1267,197,false)				//	Crew Name plate
 	
 	if crews_menu[? "Members"] == true {
-		draw_set_color(c_selected_gray)
-	} else draw_set_color(c_front_gray)
+		draw_set_color(c_selected_gui)
+	} else draw_set_color(c_front_gui)
 	draw_rectangle(1115,203,1267,236,false)				//	Members plate
 	if crews_menu[? "Settings"] == true {
-		draw_set_color(c_selected_gray)
-	} else draw_set_color(c_front_gray)
+		draw_set_color(c_selected_gui)
+	} else draw_set_color(c_front_gui)
 	draw_rectangle(1115,242,1267,275,false)				//	Settings plate
 	
 	
@@ -76,9 +76,9 @@ if (crews_menu[? "Crew"] == true) {
 		for(var i=1;i<crew_size+1;i++) {
 			var _id = ds_list_find_value(crew[crew_selected],i-1)
 			if selection == _id {
-				draw_set_color(c_selected_gray)	
+				draw_set_color(c_selected_gui)	
 			} else {
-				draw_set_color(c_front_gray)
+				draw_set_color(c_front_gui)
 			}
 			draw_roundrect(1117,_y,1267,_y+29,false)
 			draw_set_color(c_white)		
@@ -93,13 +93,13 @@ if (crews_menu[? "Crew"] == true) {
 			
 			//Settings:Stash
 			if i == 1 and crews_menu[? "Settings:Stash"] == true {
-				draw_set_color(c_selected_gray)
-			} else draw_set_color(c_front_gray)
+				draw_set_color(c_selected_gui)
+			} else draw_set_color(c_front_gui)
 			
 			if i == 2 and crews_menu[? "Settings:Zone"] == true {
-				draw_set_color(c_selected_gray)	
+				draw_set_color(c_selected_gui)	
 			} else if i == 2 and crews_menu[? "Settings:Zone"] = false {
-				draw_set_color(c_front_gray)
+				draw_set_color(c_front_gui)
 			}
 			
 			draw_roundrect(1117,_y,1267,_y+29,false)
@@ -120,15 +120,15 @@ if (crews_menu[? "Crew"] == true) {
 		
 		//Drawing Stash menu
 		if crews_menu[? "Settings:Stash"] == true {
-			draw_set_color(c_back_gray)
+			draw_set_color(c_back_gui)
 			var menu_height = ((ds_list_size(list_crew_settings_stash))*35)-35
 			draw_roundrect(938,294,1103,333+menu_height,false)
 			var stash_y = 299
 			for(var c=0;c<ds_list_size(list_crew_settings_stash);c++) {
 				var house_id = ds_list_find_value(list_crew_settings_stash,c)
 				if house_id.stash == crew_selected {
-					draw_set_color(c_selected_gray)	
-				} else draw_set_color(c_front_gray)
+					draw_set_color(c_selected_gui)	
+				} else draw_set_color(c_front_gui)
 				draw_roundrect(946,stash_y,1096,stash_y+29,false)
 				draw_set_color(c_white)
 				draw_set_halign(fa_center)
@@ -146,7 +146,7 @@ if (crews_menu[? "Crew"] == true) {
 	if (selection !=0 and object_get_name(selection.object_index) == "o_goon") {
 		if selection.crew != crew_selected {
 			_y = _y+5
-			draw_set_color(c_front_gray)
+			draw_set_color(c_front_gui)
 			draw_roundrect(1117,_y,1267,_y+35,false)
 			draw_set_color(c_white)
 			draw_set_font(roboto_condensed_12)

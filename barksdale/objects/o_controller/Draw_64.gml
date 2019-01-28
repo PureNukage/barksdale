@@ -1,7 +1,7 @@
 //GUI
 
 //Portrait Box
-draw_set_color(c_back_gray)
+draw_set_color(c_back_gui)
 draw_rectangle(23,462,270,703,false)
 
 //Stats Box
