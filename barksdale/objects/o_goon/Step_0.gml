@@ -7,3 +7,5 @@ switch(goontasks)
 {
 	case goontasks.deal: scr_goon_deal() break;	
 }
+
+depth = -y

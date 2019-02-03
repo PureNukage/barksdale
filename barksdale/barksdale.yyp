@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "b55c4a3e-6864-41ca-9791-d5a2ce74db29",
+            "Value": {
+                "id": "de392ad9-5baa-4d07-b825-44391d6eb7d8",
+                "resourcePath": "sprites\\s_civilian\\s_civilian.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bb08639d-077d-4f6a-86b5-063bd9659b82",
             "Value": {
                 "id": "fed2d280-a1ab-4193-a98d-ed0231e69533",

@@ -1,6 +1,8 @@
 selected = false
 portrait = s_portrait_blank
 
+depth = -y
+
 building_type = "House"
 
 resource_money = 0
