@@ -24,7 +24,7 @@ if o_controller.bank.resource_money < price {
 	switch(resource)	//  ooh, whaddya get? 
 	{
 		case "resource_product": o_controller.bank.resource_product += qty break;
-		case "o_goon": instance_create_layer(o_controller.bank.x+50,o_controller.bank.y+150,"Instances",o_goon) break;
+		case "o_goon": instance_create_layer(o_controller.bank.x+33,o_controller.bank.y+72,"Instances",o_goon) break;
 	}
 
 	scr_resource_count()

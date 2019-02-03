@@ -1,4 +1,4 @@
-depth = -50
+depth = -10000
 
 //  Switch to determine if goon or crew zone
 
