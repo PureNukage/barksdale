@@ -19,8 +19,8 @@ switch(goonstates)
 
 if resource_product < 15 and skip == false {
 	
-	goalX = o_controller.crew_stash[crew].x
-	goalY = o_controller.crew_stash[crew].y
+	goalX = o_controller.crew_stash[crew].x+33
+	goalY = o_controller.crew_stash[crew].y+72
 	
 	current_action = scr_goon_reup
 	skip = true

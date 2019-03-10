@@ -5,8 +5,8 @@ if crew != -1 {
 		//	I am out of product! Let me go pickup some more from the stash house
 		if resource_product < 15 {
 			var stashhouse = o_controller.crew_stash[crew]
-			goalX = stashhouse.x+66
-			goalY = stashhouse.y+145
+			goalX = stashhouse.x+33
+			goalY = stashhouse.y+72
 			if scr_mp_grid_define_path(x,y,goalX,goalY,goon_path,mp_grid,true) {
 				pos = 1
 				x_goto = path_get_point_x(goon_path,pos)
