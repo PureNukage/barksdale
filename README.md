@@ -2,6 +2,4 @@ Welcome to the city of Barksdale
 
 ![Avon](https://github.com/PureNukage/barksdale/blob/vertical-slice/avon.PNG)
 
-For documentation, please check out the [Wiki!](https://github.com/PureNukage/barksdale/wiki)
-
-Current [scratchpad](https://github.com/PureNukage/barksdale/wiki/scratchpad)
+Game Design Documentation: [Wiki!](https://github.com/PureNukage/barksdale/wiki)
